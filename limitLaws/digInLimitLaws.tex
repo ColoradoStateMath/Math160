@@ -15,14 +15,14 @@ In this section, we present a handful of rules called the \textit{Limit Laws}
 that allow us to find limits of various combinations of functions.
 
 \begin{theorem}[Limit Laws]\index{limit laws}\label{theorem:limit-laws}
-Suppose that $\lim_{x\to a}f(x)=L$, $\lim_{x\to a}g(x)=M$.
+Suppose that $\displaystyle\lim_{x\to a}f(x)=L$, $\displaystyle\lim_{x\to a}g(x)=M$.
 \begin{description}
-%\item[\textbf{Constant Multiple Law}] $\lim_{x\to a} kf(x) = k\lim_{x\to a}f(x)=kL$.
-\item[Sum/Difference Law] $\lim_{x\to a} (f(x) \pm g(x)) =
+%\item[\textbf{Constant Multiple Law}] $\displaystyle\lim_{x\to a} kf(x) = k\displaystyle\lim_{x\to a}f(x)=kL$.
+\item[Sum/Difference Law] $\displaystyle\lim_{x\to a} (f(x) \pm g(x)) =
   \lim_{x\to a}f(x) \pm \lim_{x\to a}g(x)=L \pm M$.
-\item[Product Law]  $\lim_{x\to a} (f(x)g(x)) = \lim_{x\to
+\item[Product Law]  $\displaystyle\lim_{x\to a} (f(x)g(x)) = \lim_{x\to
   a}f(x)\cdot\lim_{x\to a}g(x)=LM$.
-\item[Quotient Law]  $\lim_{x\to a} \frac{f(x)}{g(x)} =
+\item[Quotient Law]  $\displaystyle\lim_{x\to a} \frac{f(x)}{g(x)} =
   \frac{\lim_{x\to a}f(x)}{\lim_{x\to a}g(x)}=\frac{L}{M}$, if
   $M\ne0$.
 \end{description}
@@ -58,16 +58,16 @@ Suppose that $\lim_{x\to a}f(x)=L$, $\lim_{x\to a}g(x)=M$.
 \begin{example}
   Compute the following limit using limit laws:
   \[
-  \lim_{x\to 1}(5x^2+3x-2)
+  \displaystyle\lim_{x\to 1}(5x^2+3x-2)
   \]
 \begin{explanation}
   Well, get out your pencil and write with me:
   \[
-  \lim_{x\to 1} (5x^2+3x-2) = \lim_{x\to 1} 5x^2 + \lim_{x\to 1} \answer[given]{3x} - \lim_{x\to 1}2
+  \displaystyle\lim_{x\to 1} (5x^2+3x-2) = \lim_{x\to 1} 5x^2 + \lim_{x\to 1} \answer[given]{3x} - \lim_{x\to 1}2
   \]
   by the Sum/Difference Law. So now
   \[
-  = 5\lim_{x\to 1} x^2 + 3\lim_{x\to 1} x - \lim_{x\to 1}\answer[given]{2}
+  = 5\displaystyle\lim_{x\to 1} x^2 + 3\lim_{x\to 1} x - \lim_{x\to 1}\answer[given]{2}
   \]
   by the Product Law. Finally by continuity of $x^k$ and $k$,
   \[
@@ -103,20 +103,20 @@ We can generalize the example above to get the following theorems.
   rational functions are continuous wherever they are defined.
 \begin{explanation}
       Let $a$ be a real number such that $g(a)\neq 0$.  Then, since
-      $g(x)$ is continuous at $a$, $\lim_{x\to a} g(x) \neq 0$.
+      $g(x)$ is continuous at $a$, $\displaystyle\lim_{x\to a} g(x) \neq 0$.
       Therefore, write with me, 
       \[
-      \lim_{x \to a} h(x) = \lim_{x\to a} \frac{f(x)}{g(x)}
+      \displaystyle\lim_{x \to a} h(x) = \lim_{x\to a} \frac{f(x)}{g(x)}
       \]
       and now by the Quotient Law, 
       \[
-      \frac{\lim_{x\to a} f(x)}{ \lim_{x\to a} g(x)}
+      \displaystyle\frac{\lim_{x\to a} f(x)}{ \lim_{x\to a} g(x)}
       \]
       and by the continuity of polynomials we may now set $x=a$
       \[
       \frac{f(a)}{g(a)}=h(a).
       \]
-      Since we have shown that $\lim_{x\to a} h(x) = h(a)$, we have
+      Since we have shown that $\displaystyle\lim_{x\to a} h(x) = h(a)$, we have
       shown that $h$ is continuous at $x=a$.
 \end{explanation}
 \end{theorem}
@@ -136,9 +136,9 @@ Now, we give basic rules for how limits interact with composition
 of functions.
 
 \begin{theorem}[Composition Limit Law]\index{composition limit law}
-  If $f(x)$ is continuous at $x = \lim_{x\to a} g(x)$, then
+  If $f(x)$ is continuous at $x = \displaystyle\lim_{x\to a} g(x)$, then
   \[
-  \lim_{x\to a} f(g(x)) = f(\lim_{x\to a} g(x)).
+  \displaystyle\lim_{x\to a} f(g(x)) = f(\lim_{x\to a} g(x)).
   \]
 \end{theorem}
 
@@ -152,7 +152,7 @@ If $g$ is continuous at $x=a$, then $f(g(x))$ is continuous at $x=a$.
 \begin{example}
   Compute the following limit using limit laws:
   \[
-  \lim_{x \to 0} \sqrt{\cos(x)}
+  \displaystyle\lim_{x \to 0} \sqrt{\cos(x)}
   \]
   \begin{explanation}
     By continuity of $x^k$, assuming $\lim_{x \to 0} \cos(x) >0$,
@@ -185,7 +185,7 @@ Let's try this out.
 \begin{question}
   Can this limit be directly computed by limit laws?
   \[
-  \lim_{x\to 2}\frac{x^2+3x+2}{x+2} 
+  \displaystyle\lim_{x\to 2}\frac{x^2+3x+2}{x+2} 
   \]
   \begin{multipleChoice}
     \choice[correct]{yes}
@@ -194,7 +194,7 @@ Let's try this out.
   \begin{question}
     Compute:
     \[
-    \lim_{x\to 2}\frac{x^2+3x+2}{x+2}\begin{prompt} =\answer{3}\end{prompt}
+    \displaystyle\lim_{x\to 2}\frac{x^2+3x+2}{x+2}\begin{prompt} =\answer{3}\end{prompt}
     \]
     \begin{feedback}
       Since $f(x)=\frac{x^2+3x+2}{x+2}$ is a rational function, and
@@ -209,7 +209,7 @@ Let's try this out.
 \begin{question}
   Can this limit be directly computed by limit laws?
   \[
-  \lim_{x\to 2}\frac{x^2-3x+2}{x-2}
+  \displaystyle\lim_{x\to 2}\frac{x^2-3x+2}{x-2}
   \]
   \begin{multipleChoice}
     \choice{yes}
@@ -227,7 +227,7 @@ Let's try this out.
 \begin{question}
   Can this limit be directly computed by limit laws?
   \[
-  \lim_{x\to 0} x\sin(1/x)
+  \displaystyle\lim_{x\to 0} x\sin(1/x)
   \]
   \begin{multipleChoice}
     \choice{yes}
@@ -237,12 +237,12 @@ Let's try this out.
     If we are trying to use limit laws to compute this limit, we would
     first have to use the Product Law to say that
     \[
-    \lim_{x\to 0}x\sin(1/x)= \lim_{x\to 0} x \cdot \lim_{x\to 0} \sin(1/x).
+    \displaystyle\lim_{x\to 0}x\sin(1/x)= \lim_{x\to 0} x \cdot \lim_{x\to 0} \sin(1/x).
     \]
     We are only allowed to use this law if both limits exist, so we
     must check this first.  We know from continuity that
     \[
-    \lim_{x\to  0}x=0.
+    \displaystyle\lim_{x\to  0}x=0.
     \]
     However, we also know that $\sin(1/x)$ oscillates ``wildly'' as
     $x$ approaches $0$, and so the limit
@@ -257,7 +257,7 @@ Let's try this out.
 \begin{question}
   Can this limit be directly computed by limit laws?
   \[
-  \lim_{x\to 0} \cot(x^3)
+  \displaystyle\lim_{x\to 0} \cot(x^3)
   \]
   \begin{multipleChoice}
     \choice{yes}
@@ -278,7 +278,7 @@ Let's try this out.
     denominator is not $0$. We suspect that the limit on on the
     denominator might equal $0$, so we check this limit.
     \begin{align*}
-      \lim_{x\to 0} \sin(x^3) &= \sin(\lim_{x\to 0}x^3)\\
+      \displaystyle\lim_{x\to 0} \sin(x^3) &= \sin(\lim_{x\to 0}x^3)\\
       &=\sin(0) \\
       &=0.
   \end{align*}
@@ -291,7 +291,7 @@ Let's try this out.
 \begin{question}
   Can this limit be directly computed by limit laws?
   \[
-  \lim_{x\to 0}\sec^2(e^x-1)
+  \displaystyle\lim_{x\to 1}\sec^2(\sqrt{x}-1)
   \]
   \begin{multipleChoice}
     \choice[correct]{yes}
@@ -300,25 +300,25 @@ Let's try this out.
   \begin{question}
     Compute:
     \[
-    \lim_{x\to 0}\sec^2(e^x-1)\begin{prompt} =\answer{1}\end{prompt}
+    \displaystyle\lim_{x\to 1}\sec^2(\sqrt{x}-1)\begin{prompt} =\answer{1}\end{prompt}
     \]
     \begin{feedback}
       Notice that
       \[
-      \lim_{x\to 0} \sec^2(e^x-1) = \lim_{x\to 0} \frac{1}{\cos^2(e^x-1)}.
+      \displaystyle\lim_{x\to 1} \sec^2(\sqrt{x}-1) = \lim_{x\to 1} \frac{1}{\cos^2(\sqrt{x}-1)}.
       \]
       If we are trying to use Limit Laws to compute this limit, we
       would now have to use the Quotient Law to say that
       \[
-      \lim_{x\to 0} \frac{1}{\cos^2(e^x-1)} = \frac{ \lim_{x\to 0}1}{
-        \lim_{x\to 0}\cos^2(e^x-1)}.
+      \displaystyle\lim_{x\to 1} \frac{1}{\cos^2(\sqrt{x}-1)} = \frac{ \lim_{x\to 1}1}{
+        \lim_{x\to 1}\cos^2(\sqrt{x}-1)}.
       \]
       We are only allowed to use this law if both limits exist and the
       denominator is not $0$.  Let's check the denominator and numerator
       separately. First we'll compute the limit of the denominator:
       \begin{align*}
-        \lim_{x\to 0}\cos^2(e^x-1) &= \cos^2(\lim_{x\to 0}(e^x-1))\\
-        &=\cos^2(\lim_{x\to 0}(e^x)-\lim_{x\to 0}(1))\\
+        \displaystyle\lim_{x\to 1}\cos^2(\sqrt{x}-1) &= \cos^2(\lim_{x\to 1}(\sqrt{x}-1))\\
+        &=\cos^2(\lim_{x\to 1}(\sqrt{x})-\lim_{x\to 1}(1))\\
         &=\cos^2(1-1)\\
         &= \cos^2(0)\\
         &=1
@@ -326,11 +326,11 @@ Let's try this out.
       Therefore, the limit in the denominator exists and does not
       equal $0$. We can use the Quotient Law, so we will compute the limit of the numerator:
       \[
-      \lim_{x\to 0}1=1
+      \lim_{x\to 1}1=1
       \]
       Hence
       \[
-      \frac{ \lim_{x\to 0}1}{ \lim_{x\to 0}\cos^2(e^x-1)} =
+      \frac{ \lim_{x\to 1}1}{ \lim_{x\to 1}\cos^2(\sqrt{x}-1)} =
       \frac{1}{1}=1
       \]
     \end{feedback}
@@ -341,7 +341,7 @@ Let's try this out.
 \begin{question}
   Can this limit be directly computed by limit laws?
   \[
-  \lim_{x\to 1}{(x-1)\cdot \csc(\ln(x))}
+  \displaystyle\lim_{x\to 4}{\left(\frac{2x}{x-4}-\frac{8}{x-4}\right)}
   \]
   \begin{multipleChoice}
     \choice{yes}
@@ -350,33 +350,29 @@ Let's try this out.
   \begin{feedback}
     If we are trying to use limit laws to compute this limit, we would have to use the Product Law to say that
     \[
-    \lim_{x\to 1}{(x-1)\cdot \csc(\ln(x))}= \lim_{x\to 1}{(x-1)\cdot \lim_{x\to 1}\csc(\ln(x))}.
+    \displaystyle\lim_{x\to 4}\left(\frac{2x}{x-4} - \frac{8}{x-4}\right)= \lim_{x\to 4}\frac{2x}{x-4} - \lim_{x\to 4}\frac{8}{x-4}.
     \]
     We are only allowed to use this law if both limits exist.  Let's
     check each limit separately.
     \begin{align*}
-      \lim_{x\to 1} (x-1) &= \lim_{x\to 1} (x)-\lim_{x\to 1}(1)\\
-      &=1-1\\
-      &=0.
+      \displaystyle\lim_{x\to 4}\frac{2x}{x-4}=\frac{\lim_{x\to 4}2x}{\lim_{x\to 4}(x-4)}
     \end{align*}
-   So this limit exists. Now we check the other factor.
-   Notice that
-   \[
-   \lim_{x\to 1}\csc(\ln(x)) = \frac{1}{\sin(\ln(x))}.
-   \]
-   If we are trying to use limit laws to compute this limit, we would now have to use the Quotient Law to say that
-   \[
-   \frac{1}{\sin(\ln(x))} = \frac{\lim_{x\to 1}1}{\lim_{x\to
-       1}\sin(\ln(x))}.
-   \]
-   We are only allowed to use this law if both limits exist and the
-   denominator does not equal $0$.  The limit in the numerator definitely
-   exists, so lets check the limit in the denominator.
+
+and
+
+    \begin{align*}
+      \displaystyle\lim_{x\to 4}\frac{8}{x-4}=\frac{\lim_{x\to 4}8}{\lim_{x\to 4}(x-4)}
+    \end{align*}
+    
+   We are only allowed to use this law if both limits exist. The limits in the numerators definitely
+   exist. However, the denominator is equal to $0$ for both limits. Therefore, we cannot use the limit laws. 
+   
+   We can use algebra and simplify.
+   
    \begin{align*}
-   \lim_{x\to 1}\sin(\ln(x)) &= \sin(\lim_{x\to 1}\ln(x))\\
-   &=\sin(\ln(1))\\
-   &= \sin(0)\\
-   &= 0
+   \displaystyle\lim_{x\to 4}\frac{2x-8}{x-4}&=\lim_{x\to 4}\frac{2(x-4)}{x-4}\\
+   &=\lim_{x\to 4}2\\
+   &=2
   \end{align*}
   Since the denominator is $0$, we cannot apply the Quotient Law.
   \end{feedback}
@@ -385,7 +381,7 @@ Let's try this out.
 \begin{question}
   Can this limit be directly computed by limit laws?
   \[
-  \lim_{x\to 0} x\ln x
+  \displaystyle\lim_{x\to 0} \cot(x)\sin(x)
   \]
   \begin{multipleChoice}
     \choice{yes}
@@ -395,20 +391,22 @@ Let's try this out.
   If we are trying to use limit laws to compute this limit, we would
   have to use the Product Law to say that
   \[
-  \lim_{x\to 0} x\ln x =\lim_{x\to 0} x \cdot \lim_{x\to 0}\ln x.
+  \displaystyle\lim_{x\to 0} \cot(x)\sin(x) =\lim_{x\to 0} \cot(x) \cdot \lim_{x\to 0}\sin(x).
   \]
   We are only allowed to use this law if both limits exist.  We know
-  $\lim_{x\to 0} x = 0$, but what about $\lim_{x\to 0}\ln x$?  We do
-  not know how to find $\lim_{x\to 0}\ln x$ using limit laws because $0$
-  is not in the domain of $\ln x$.
+  $\displaystyle\lim_{x\to 0} \sin(x) = 0$, but what about $\displaystyle\lim_{x\to 0}\cot(x)$?  We do
+  not know how to find $\lim_{x\to 0}\cot(x)$ using limit laws because $0$
+  is not in the domain of $\cot(x)$.
   \end{feedback}
+  
+  However, see what you can do with trigonometric identities. Try rewriting $\cot(x)$ as $\frac{\cos(x)}{\sin(x)}$
 \end{question}
 
 
 \begin{question}
   Can this limit be directly computed by limit laws?
   \[
-  \lim_{x\to0}\frac{2^x-1}{3^{x-1}}
+  \displaystyle\lim_{x\to 0} \frac{\sin(x)}{1+x}
   \]
   \begin{multipleChoice}
     \choice[correct]{yes}
@@ -417,36 +415,24 @@ Let's try this out.
   \begin{question}
     Compute:
     \[
-    \lim_{x\to0}\frac{2^x-1}{3^{x-1}}\begin{prompt} =\answer{0}\end{prompt}
+    \displaystyle\lim_{x\to 0} \frac{\sin(x)}{1+x}\begin{prompt} =\answer{0}\end{prompt}
     \]
     \begin{feedback}
       If we are trying to use limit laws to compute this limit, we
       would have to use the Quotient Law to say that
       \[
-      \lim_{x\to 0}\frac{2^x-1}{3^{x-1}} = \frac{\lim_{x\to
-          0}(2^x-1)}{\lim_{x\to 0}(3^{x-1})}.
+      \displaystyle\lim_{x\to 0} \frac{\sin(x)}{1+x} = \frac{\lim_{x\to
+          0}\sin(x)}{\lim_{x\to 0}(1+x)}.
       \]
       We are only allowed to use this law if both limits exist and the
       denominator does not equal $0$.  Let's check each limit
       separately, starting with the denominator
-      \begin{align*}
-        \lim_{x\to 0}(3^{x-1}) &=3^{\lim_{x\to0}(x-1)}\\
-        &=3^{-1}\\
-        &=\frac{1}{3}
-      \end{align*}
-
-      On the other hand the limit in the numerator is
-      \begin{align*}
-        \lim_{x\to 0}(2^x-1) &=\lim_{x\to0}(2^x)-\lim_{x\to0}(1)\\
-        &=1-1\\
-        &=0
-      \end{align*}
+      
       The limits in both the numerator and denominator exist and the
       limit in the denominator does not equal $0$, so we can use the
       Quotient Law.  We find:
       \[
-        \frac{\lim_{x\to 0}(2^x-1)}{\lim_{x\to 0}(3^{x-1})}
-        =\frac{0}{\frac{1}{3}}=0.
+        \displaystyle \frac{\lim_{x\to 0}\sin(x)}{\lim_{x\to 0}(1+x)}=\frac{0}{1}=0.
         \]
     \end{feedback}
   \end{question}
