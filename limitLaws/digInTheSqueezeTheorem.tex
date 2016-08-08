@@ -260,17 +260,12 @@ which functions you are using to ``squeeze-out'' your limit.
   \]
  
  The function $x^2\sin\left(\frac{1}{x}\right)$ has two factors:
-    \begin{image}
-      \begin{tikzpicture}
-        \node at (0,0) {
-          $\overbrace{x^2} \cdot \underbrace{\sin\left(\frac{1}{x}\right)}$
-          };
-        \node at (-1,.7) {\small{goes to zero as $x\to 0$}};
-        \node at (1,-.7) {\small{bounded between $-1$ and $1$}};
-      \end{tikzpicture}
-    \end{image}
-    
-    Hence we have
+
+\[
+\overbrace{x^2}^{\text{goes to 0 as \it{x} goes to 0}} \cdot \underbrace{\sin\left(\frac{1}{x}\right)}_{\text{bounded between -1 and 1}}
+\]
+   
+   Hence we have
     \[
     x^2 \answer[given]{-1} \le x^2\sin\left(\frac{1}{x}\right) \le x^2 \answer[given]{1}
     \]
