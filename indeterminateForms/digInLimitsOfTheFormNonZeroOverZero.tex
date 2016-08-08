@@ -32,11 +32,10 @@ Let's cut to the chase:
 \begin{question}
   Which of the following limits are of the form \numOverZero?
   \begin{selectAll}
-    \choice[correct]{$\lim_{x\to -1} \frac{1}{(x+1)^2}$}
-    \choice{$\lim_{x\to 2}\frac{x^2-3x+2}{x-2}$}
-    \choice{$\lim_{x\to 0}\frac{\sin(x)}{x}$}
-    \choice[correct]{$\lim_{x\to 2}\frac{x^2-3x-2}{x-2}$}
-    \choice[correct]{$\lim_{x\to 1}\frac{e^x}{\ln(x)}$}
+    \choice[correct]{$\displaystyle\lim_{x\to -1} \frac{1}{(x+1)^2}$}
+    \choice{$\displaystyle\lim_{x\to 2}\frac{x^2-3x+2}{x-2}$}
+    \choice{$\displaystyle\lim_{x\to 0}\frac{\sin(x)}{x}$}
+    \choice[correct]{$\displaystyle\lim_{x\to 2}\frac{x^2-3x-2}{x-2}$}
   \end{selectAll}
 \end{question}
 
@@ -106,12 +105,12 @@ Let's consider a few more examples.
 \begin{example}
   Compute:
   \[
-  \lim_{x\to -2} \frac{e^x}{(x+2)^4}
+  \lim_{x\to -2} \frac{3x}{(x+2)^4}
   \]
   \begin{explanation}
     First let's look at the form of this limit, we do this by taking the limits of both the numerator and denominator:
     \[
-    \lim_{x\to -2} e^x = \answer[given]{\frac{1}{e^2}}\qquad\text{and}\lim_{x\to-2}\left((x+2)^4\right) = 0
+    \lim_{x\to -2} 3x = \answer[given]{-6}\qquad\text{and}\lim_{x\to-2}\left((x+2)^4\right) = 0
     \]
     so this limit is of the form \numOverZero.  As $x$ approaches $-2$:
     \begin{itemize}
@@ -120,7 +119,7 @@ Let's consider a few more examples.
     \end{itemize}
     This means that
     \[
-    \lim_{x\to -2} \frac{e^x}{(x+2)^4} = \infty.
+    \lim_{x\to -2} \frac{3x}{(x+2)^4} = -\infty.
     \]
   \end{explanation}
 \end{example}
