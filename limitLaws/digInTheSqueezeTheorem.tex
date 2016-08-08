@@ -225,7 +225,7 @@ which functions you are using to ``squeeze-out'' your limit.
 \begin{example}
   Compute:
   \[
-  \displaystyle\lim_{x\to 0} \left(x^2\sin\left(\frac{1}{x}\right)\right)}
+  \displaystyle\lim_{x\to 0} \left(x^2\sin\left(\frac{1}{x}\right)\right)
   \]
   \begin{explanation}
     Let's graph this function to see what's going on:
@@ -257,8 +257,9 @@ which functions you are using to ``squeeze-out'' your limit.
    %% \end{image}
   \[
    \graph{f(x)=x^2*\sin(1/x)}
-   \]
-    The function $x^2\sin\left(\frac{1}{x}\right)$ has two factors:
+  \]
+ 
+ The function $x^2\sin\left(\frac{1}{x}\right)$ has two factors:
     \begin{image}
       \begin{tikzpicture}
         \node at (0,0) {
@@ -268,9 +269,10 @@ which functions you are using to ``squeeze-out'' your limit.
         \node at (1,-.7) {\small{bounded between $-1$ and $1$}};
       \end{tikzpicture}
     \end{image}
+    
     Hence we have
     \[
-    x^2 \answer[given]{-1} \le x^2\sin\left(\frac{1}{x}\right)} \le x^2 \answer[given]{1}
+    x^2 \answer[given]{-1} \le x^2\sin\left(\frac{1}{x}\right) \le x^2 \answer[given]{1}
     \]
     and we see
     \[
@@ -279,7 +281,7 @@ which functions you are using to ``squeeze-out'' your limit.
     and so by the Squeeze theorem,
     \[
     \lim_{x\to
-      0}\left(x^2\sin\left(\frac{1}{x}\right)}\right)=\answer[given]{0}.
+      0}\left(x^2\sin\left(\frac{1}{x}\right)\right)=\answer[given]{0}.
     \]
   \end{explanation}
 \end{example}
