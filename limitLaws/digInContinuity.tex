@@ -84,8 +84,8 @@ It is very important to note that saying
 is really making \textbf{three} statements:
 \begin{enumerate}
 \item $f(a)$ is defined.  That is, $a$ is in the domain of $f$.
-\item $\lim_{x\to a} f(x)$ exists.
-\item $\lim_{x\to a} f(x) = f(a)$.
+\item $\displaystyle\lim_{x\to a} f(x)$ exists.
+\item $\displaystyle\lim_{x\to a} f(x) = f(a)$.
 \end{enumerate}
 
 The first two of these statements are implied by the third statement.
@@ -129,7 +129,7 @@ continuous) for the function described below:
   To start, $f$ is not even defined at $x=\answer[given]{2}$, hence $f$
   cannot be continuous at $x=\answer[given]{2}$.
 
-  Next, from the plot above we see that $\lim_{x\to 4} f(x)$ does not
+  Next, from the plot above we see that $\displaystyle\lim_{x\to 4} f(x)$ does not
   exist because
   \[
   \lim_{x\to 4^-}f(x) = \answer[given]{1}\qquad\text{and}\qquad \lim_{x\to 4^+}f(x) \approx \answer[given,tolerance=1]{3.5}
@@ -137,8 +137,8 @@ continuous) for the function described below:
 Hence $\lim_{x\to 4} f(x) \ne f(4)$, and so $f(x)$ is not
 continuous at $x=4$.
 
-We also see that $\lim_{x\to 6} f(x) \approx \answer[given,tolerance=.5]{3}$ while $f(6) =
-\answer[given]{2}$. Hence $\lim_{x\to 6} f(x)$ does not exist, and so $f$ is not
+We also see that $\displaystyle\lim_{x\to 6} f(x) \approx \answer[given,tolerance=.5]{3}$ while $f(6) =
+\answer[given]{2}$. Hence $\displaystyle\lim_{x\to 6} f(x)$ does not exist, and so $f$ is not
 continuous at $x=6$.
 \end{explanation}
 \end{example}
@@ -150,7 +150,7 @@ an open interval.
 
 \begin{definition}
   A function $f$ is \dfn{continuous on an open interval} $I$ if
-  $\lim_{x\to a} f(x) = f(a)$ for all $a$ in $I$.
+  $\displaystyle\lim_{x\to a} f(x) = f(a)$ for all $a$ in $I$.
 \end{definition}
 
 Loosely speaking, a function is continuous on an interval $I$ if you
@@ -176,13 +176,13 @@ domains.
 
 \begin{question}
   Compute:
-  $\lim_{x\to 3} x^\pi \begin{prompt}= \answer{3^\pi}\end{prompt}$
+  $\displaystyle\lim_{x\to 3} x^\pi \begin{prompt}= \answer{3^\pi}\end{prompt}$
   \begin{feedback}
     The function $f(x)=x^\pi$ is of the form $x^k$ for a real number
     $k$.  Therefore, $f(x)=x^\pi$ is continuous for all real values of
     $x$.  In particular, $f(x)$ is continuous at $x=3$.  Since $x^\pi$
-    is continuous at $3$, we know that $\lim_{x\to 3} f(x) = f(3)$.
-    That is, $\lim_{x\to 3} x^\pi = 3^\pi$
+    is continuous at $3$, we know that $\displaystyle\lim_{x\to 3} f(x) = f(3)$.
+    That is, $\displaystyle\lim_{x\to 3} x^\pi = 3^\pi$
   \end{feedback}  
 \end{question}
 
@@ -197,10 +197,10 @@ quagmire, we need a new definition:
 
 \begin{definition}
   A function $f$ is \dfn{left continuous} at a point $a$ if
-  $\lim_{x\to a^-} f(x) = f(a)$.
+  $\displaystyle\lim_{x\to a^-} f(x) = f(a)$.
 
   A function $f$ is \dfn{right continuous} at a point $a$ if
-  $\lim_{x\to a^+} f(x) = f(a)$.
+  $\displaystyle\lim_{x\to a^+} f(x) = f(a)$.
 \end{definition}
 
 Now we can say that a function is continuous at a left endpoint of an
