@@ -23,13 +23,13 @@ Consider the following piecewise defined function
 \[
 f(x) = 
 \begin{cases}
-  \frac{x}{x-1} &\text{if $x<0$ and $x\ne 1$,}\\
-  e^{-x} + c &\text{if $x\ge 0$}.
+  \frac{x}{x-1} &\text{if $x<0$,}\\
+  \cos(-x) + C &\text{if $x\ge 0$}.
 \end{cases}
 \]
-Find $c$ so that $f$ is continuous at $x=0$.
+Find $C$ so that $f$ is continuous at $x=0$.
 \begin{explanation}
-  To find $c$ such that $f$ is continuous at $x=0$, we need to find
+  To find $C$ such that $f$ is continuous at $x=0$, we need to find
   $c$ such that
   \[
   \lim_{x\to 0^-} f(x) = \lim_{x\to 0^+}f(x) = f(\answer[given]{0}).
@@ -42,15 +42,15 @@ Find $c$ so that $f$ is continuous at $x=0$.
   \end{align*}
   On there other hand
   \begin{align*}
-    \lim_{x\to 0^+} f(x) &= \lim_{x\to 0^+}\left(\answer[given]{e^{-x}+c}\right)\\
-    &= \answer[given]{e^0 + c}\\
-    &= \answer[given]{1+ c}
+    \lim_{x\to 0^+} f(x) &= \lim_{x\to 0^+}\left(\answer[given]{\cos(-x)+C}\right)\\
+    &= \answer[given]{\cos(0) + C}\\
+    &= \answer[given]{1+ C}
   \end{align*}
   Hence for our function to be continuous, we need
   \[
-  1 + c = 0\qquad\text{so}\qquad c = \answer[given]{-1}.
+  1 + C = 0\qquad\text{so}\qquad C = \answer[given]{-1}.
   \]
-  Now, $\lim_{x\to 0} f(x) = f(\answer[given]{0})$, and so $f$ is continuous.
+  Now, $\displaystyle\lim_{x\to 0} f(x) = f(\answer[given]{0})$, and so $f$ is continuous.
 \end{explanation}
 \end{example}
 
