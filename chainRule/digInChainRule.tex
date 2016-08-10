@@ -122,16 +122,16 @@ would otherwise be difficult to get our hands on.
 \begin{example}
 Compute:
 \[
-\ddx e^{\sin(x^2)}
+\ddx \sqrt{\sin(x^2)}
 \]
 
 \begin{explanation}
-set $f(x) = \answer[given]{e^x}$, $g(x) = \answer[given]{\sin(x)}$, and $h(x) = \answer[given]{x^2}$
-so that $f(g(x)) = e^{\sin(x^2)}$. Now
+set $f(x) = \answer[given]{\sqrt{x}}$, $g(x) = \answer[given]{\sin(x)}$, and $h(x) = \answer[given]{x^2}$
+so that $f(g(x)) = \sqrt{\sin(x^2)}$. Now
 \begin{align*}
-  \ddx e^{\sin(x^2)} &= \ddx f(g(h(x)))\\
+  \ddx \sqrt{\sin(x^2)} &= \ddx f(g(h(x)))\\
   &= f'(g(h(x))) \cdot g'(h(x)) \cdot h'(x)\\
-  &= e^{\answer[given]{\sin(x^2)}} \cdot \cos(\answer[given]{x^2}) \cdot \answer[given]{2x}.
+  &= (\answer[given]{\sin(x^2)})^{-1/2} \cdot \cos(\answer[given]{x^2}) \cdot \answer[given]{2x}.
 \end{align*}
 \end{explanation}
 \end{example}
