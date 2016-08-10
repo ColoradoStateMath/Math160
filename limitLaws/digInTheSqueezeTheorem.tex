@@ -83,9 +83,19 @@ f(x) =
 %% \]
 %% }
 \end{image}
-Is this function continuous at $x=0$?
+Does $\displaystyle\lim_{x\to 0}f(x)$ exist?
 \begin{explanation}
-We must show that $\lim_{x\to 0} f(x) = \answer[given]{0}$. Note
+Notice that 
+\[
+-1\le \sin\left(\frac{1}{x}\right) \le 1
+\]
+
+\[
+-|\sqrt[5]{x}|\le |\sqrt[5]{x}|\sin\left(\frac{1}{x}\right) \le |\sqrt[5]{x}|
+\]
+
+So
+
 \[
 -|\sqrt[5]{x}|\le f(x) \le |\sqrt[5]{x}|.
 \]
@@ -94,11 +104,8 @@ Since
 \lim_{x\to 0} -|\sqrt[5]{x}| = \answer[given]{0} = \lim_{x\to 0}|\sqrt[5]{x}|,
 \]
 we see by the Squeeze Theorem, Theorem, that
-$\displaystyle\lim_{x\to 0} f(x) = \answer[given]{0}$. Hence $f(x)$ is continuous.
+$\displaystyle\lim_{x\to 0} f(x) = \answer[given]{0}$. 
 
-Here we see how the informal definition of continuity being that you
-can ``draw it'' without ``lifting your pencil'' differs from the
-formal definition.
 \end{explanation}
 \end{example}
 
