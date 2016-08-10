@@ -79,8 +79,8 @@ when finding the average rate of change of a function $f(x)$ on the interval $I=
 However, the question remains: Given a function that represents an
 amount, how exactly does one find the function that will give the
 instantaneous rate of change? Recall that the instantaneous rate of change
-of a straight line is the slope of the tangent line.  Hence the instantaneous rate of
-change of a function is the slope of the tangent line of the function at that point.
+of a straight line at \emph{any} is the slope of the tangent line.  Hence the instantaneous rate of
+change of a function at a point is the slope of the tangent line of the function at that point.
 For now, consider the following informal definition of a \textit{tangent line}:
 \begin{quote}\index{tangent line}
 Given a function $f$ and a number $a$ in the domain of $f$, if one can ``zoom in''
@@ -166,16 +166,16 @@ We illustrate this informal definition with the following diagram:
 
 
 The \textit{derivative} of a function $f$ at $a$, is the instantaneous
-rate of change, and hence is the slope of the tangent line at $(a,f(a))$. 
+rate of change, and hence is the slope of the tangent line of $f$ at $(a,f(a))$.
 
 \begin{question}
-	What is the instantaneous rate of change of $f(x) = 4x-3$?
+	What is the instantaneous rate of change of $f(x) = 4x-3$ at $x=3$?
 	\begin{hint}
-		The rate of change is the slope of the tangent line.
+		The rate of change  of a straight line at any point is the slope of the tangent line.
         
 	\end{hint}
 	\begin{hint}
-		The line tangent to $f(x) = 4x-3$, is simply itself!
+		The line tangent to $f(x) = 4x-3$ at any point is, simply, itself ($f(x)$)!
 	\end{hint}
 	\begin{prompt}
 		The derivative is \answer{4}.
@@ -183,8 +183,8 @@ rate of change, and hence is the slope of the tangent line at $(a,f(a))$.
 \end{question}
 
 
-Unfortunately, if $f$ is not a straight line we cannot use the slope
-formula to calculate this rate of change, since $(a,f(a))$ is the only
+Unfortunately, if $f$ is not a straight line, we cannot use the slope
+to calculate this rate of change of $f$at a point, since $(a,f(a))$ is the only
 point on this line that we know.  In order to deal with this problem,
 we consider \dfn{secant} lines, lines that locally intersect the curve
 at two points.  One of these points will be $(a, f(a))$, the point at
@@ -263,7 +263,7 @@ $h$, as well as the tangent line at $(a,f(a))$.
 %\todo{This image should be interactive.}
 
 
-Notice that as $a+h$ approaches $a$, the slopes of the secant lines are approaching
+Notice that as $a+h$ approaches $a$ i.e. $h$ approaches $0$, the slopes of the secant lines are approaching
 the slope of the tangent line.  This leads to the \textit{definition of the derivative}:
 
 \begin{definition}
@@ -296,7 +296,7 @@ the slope of the tangent line.  This leads to the \textit{definition of the deri
 \begin{definition}\index{derivative!notation}
   There are several different notations for the derivative.  The two we'll mainly be using are
   \[
-  \eval{\ddx f(x)}_{x=a} = f'(a).
+  \eval{\ddx f(x)}_{x=a} = \ddx f(x) \Big|_{x=a} = f'(a).
   \]
 \end{definition}
 
@@ -314,13 +314,17 @@ Now we will give a number of examples.
     \eval{\ddx f(x)}_{x=2} = \lim_{h\to 0}\frac{\answer[given]{(2+h)^2-2(2+h)} -0}{h}.
     \]
     Now expand the numerator of the fraction,
+    \begin{expandable}
     \[
-    \eval{\ddx f(x)}_{x=2} = \lim_{h\to 0} = \frac{4+4h+h^2-4-2h }{h}.
+    \eval{\ddx f(x)}_{x=2} = \lim_{h\to 0} \frac{4+4h+h^2-4-2h }{h}.
     \]
+      \begin{expandable}
     Now combine like-terms,
     \[
     \eval{\ddx f(x)}_{x=2} = \lim_{h\to 0}\frac{2h+h^2}{h}.
     \]
+      \end{expandable}
+    \end{expandable}
     Factor an $h$ from every term in the numerator,
     \[
     \eval{\ddx f(x)}_{x=2} = \lim_{h\to 0}\frac{h(\answer[given]{2+h})}{h}.
@@ -352,14 +356,18 @@ Now we will give a number of examples.
     \[
     f'(2) = \lim_{h\to 0} \frac{\answer[given]{1 - (1-h)}}{h(1-h)}.
     \]
+    \begin{expandable}
     Combine like-terms in the numerator,
     \[
     f'(2) = \lim_{h\to 0} \frac{h}{h(1-h)},
     \]
+    \begin{expandable}
     Cancel $h$ from the numerator and denominator,
     \[
     f'(2) = \lim_{h\to 0} \frac{1}{1-h},
     \]		
+    \end{expandable}
+    \end{expandable}
     Take the limit as $h$ goes to $0$,
     \[
     f'(2) = \answer[given]{1}.
@@ -383,10 +391,12 @@ Now we will give a number of examples.
     \[
     \eval{\dd{t} s(t)}_{t=6} = \lim_{h \to 0} \frac{s(\answer[given]{6+h})-s(6)}{h} = \lim_{h\to 0} \frac{\sqrt{\answer[given]{9+h}}-3}{h}.
     \]
+    \begin{expandable}
     Multiply by $\frac{\sqrt{9+h}+3}{\sqrt{9+h}+3}$,
     \[
     \eval{\dd{t} s(t)}_{t=6} = \lim_{h\to 0} \left(\frac{\sqrt{9+h}-3}{h} \right)\left( \frac{\sqrt{9+h}+3}{\sqrt{9+h}+3} \right).
     \]		
+    \end{expandable}
     Now expand the numerator,
     \[
     \eval{\dd{t} s(t)}_{t=6} = \lim_{h \to 0} \frac{\answer[given]{9+h} - 9}{h\left(\sqrt{9+h}+3 \right)}.
@@ -395,10 +405,12 @@ Now we will give a number of examples.
     \[
     \eval{\dd{t} s(t)}_{t=6} = \lim_{h \to 0} \frac{\answer[given]{h}}{h\left(\sqrt{9+h}+3\right)}.
     \]
+    \begin{expandable}
     Cancel $h$ from the numerator and denominator,
     \[
     \eval{\dd{t} s(t)}_{t=6} = \lim_{h\to 0} \frac{1}{\sqrt{9+h}+3}.
     \]
+    \end{expandable}
     Take the limit as $h$ tends to $0$,
     \[
     \eval{\dd{t} s(t)}_{t=6} = \answer[given]{\frac{1}{6}}.
