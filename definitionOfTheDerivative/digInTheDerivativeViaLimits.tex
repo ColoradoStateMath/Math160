@@ -1,4 +1,4 @@
-\documentclass{ximera}
+\documentclass[folded]{ximera}
 
 \outcome{Use limits to find the slope of the tangent line at a point.}
 \outcome{Understand the definition of the derivative at a point.}
@@ -63,18 +63,25 @@ following:
 
 \section{From slopes of secant lines to slopes of tangent lines}
 
-You've been computing average rates of change for a while now, the
-computation is simply
+You've been computing average rates of change in class for a while now,
+the computation is simply
 \[
 \frac{\text{change in the function}}{\text{change in the input to the
-    function}}.
+    function}}
 \]
+or
+\[
+\frac{f(b)-f(a)}{b-a}
+\]
+when finding the average rate of change of a function $f(x)$ on the interval $I=[b,a]$.
+
+
 However, the question remains: Given a function that represents an
 amount, how exactly does one find the function that will give the
 instantaneous rate of change? Recall that the instantaneous rate of change
-of a line is the slope of the line.  Hence the instantaneous rate of
-change of a function is the slope of the tangent line. For now,
-consider the following informal definition of a \textit{tangent line}:
+of a straight line is the slope of the tangent line.  Hence the instantaneous rate of
+change of a function is the slope of the tangent line of the function at that point.
+For now, consider the following informal definition of a \textit{tangent line}:
 \begin{quote}\index{tangent line}
 Given a function $f$ and a number $a$ in the domain of $f$, if one can ``zoom in''
 on the graph at $(a, f(a))$ sufficiently so that it appears to be a straight line,
@@ -165,6 +172,7 @@ rate of change, and hence is the slope of the tangent line at $(a,f(a))$.
 	What is the instantaneous rate of change of $f(x) = 4x-3$?
 	\begin{hint}
 		The rate of change is the slope of the tangent line.
+        
 	\end{hint}
 	\begin{hint}
 		The line tangent to $f(x) = 4x-3$, is simply itself!
