@@ -62,13 +62,119 @@ functions on $\RR$ that are not differentiable on $\RR$.
 
 \begin{question}
   Which of the following functions are continuous but not
-  differentiable on $\RR$?
+  differentiable on $\RR$? (Select all correct answers)
   \begin{selectAll}
     \choice{$x^2$}
     \choice{$\lfloor x \rfloor$}
     \choice[correct]{$|x|$}
     \choice{$\frac{\sin(x)}{x}$}
   \end{selectAll}
+\end{question}
+
+From our informal definition of derivative of a function,
+we can see that the piece-wise function
+
+\[
+f(x) = \begin{cases}
+        1 &\text{if $x\leq 3$,}\\
+        0.5(x-3)+1 &\text{if $x>3$}
+       \end{cases}
+\]
+is not differentible at $x=3$:
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=0:6, range=0:7,
+            ymin=-.2,ymax=7,
+            width=6in,
+            height=2.5in, %% Hard coded height! Moreover this effects the aspect ratio of the zoom--sort of BAD
+            axis lines=none,
+          ]   
+          \addplot [draw=none, fill=textColor!10!background] plot coordinates {(.8,1.6) (2.834,5)} \closedcycle; %% zoom fill
+          \addplot [draw=none, fill=textColor!10!background] plot coordinates {(2.834,5) (4.166,5)} \closedcycle; %% zoom fill
+          \addplot [draw=none, fill=background] plot coordinates {(1.2,1.6) (4.166,5)} \closedcycle; %% zoom fill
+          \addplot [draw=none, fill=background] plot coordinates {(.8,1.6) (1.2,1.6)} \closedcycle; %% zoom fill
+
+          \addplot [draw=none, fill=textColor!10!background] plot coordinates {(3.3,3.6) (5.334,5)} \closedcycle; %% zoom fill
+          \addplot [draw=none, fill=textColor!10!background] plot coordinates {(5.334,5) (6.666,5)} \closedcycle; %% zoom fill
+          \addplot [draw=none, fill=background] plot coordinates {(3.7,3.6) (6.666,5)} \closedcycle; %% zoom fill
+          \addplot [draw=none, fill=background] plot coordinates {(3.3,3.6) (3.7,3.6)} \closedcycle; %% zoom fill
+          
+          \addplot [draw=none, fill=textColor!10!background] plot coordinates {(3.7,2.4) (6.666,1)} \closedcycle; %% zoom fill
+          \addplot [draw=none, fill=textColor!10!background] plot coordinates {(3.3,2.4) (3.7,2.4)} \closedcycle; %% zoom fill
+          \addplot [draw=none, fill=background] plot coordinates {(3.3,2.4) (5.334,1)} \closedcycle; %% zoom fill          
+          \addplot [draw=none, fill=background] plot coordinates {(5.334,1) (6.666,1)} \closedcycle; %% zoom fill
+          
+
+          \addplot [draw=none, fill=textColor!10!background] plot coordinates {(.8,.4) (2.834,1)} \closedcycle; %% zoom fill
+          \addplot [draw=none, fill=textColor!10!background] plot coordinates {(2.834,1) (4.166,1)} \closedcycle; %% zoom fill
+          \addplot [draw=none, fill=background] plot coordinates {(1.2,.4) (4.166,1)} \closedcycle; %% zoom fill
+          \addplot [draw=none, fill=background] plot coordinates {(.8,.4) (1.2,.4)} \closedcycle; %% zoom fill
+
+          \addplot[very thick,penColor, smooth,domain=(0:0.98)] {1}; %% Inital Point
+          \addplot[very thick,penColor, smooth,domain=(1:1.833)] {x};  %% Initial Point
+          \addplot[very thick,penColor, smooth,domain=(2.834:3.5)] {3}; %% 2.5 to 4.333
+          \addplot[very thick,penColor, smooth,domain=(3.5:4.166)] {x-0.5}; %% 2.5 to 4.333
+          %\addplot[very thick,penColor, smooth,domain=(5.334:6.666)] {11.11/(1.540-.09*x)-8.109}; %% 5 to 6.833
+          \addplot[very thick,penColor, smooth,domain=(5.334:6.00)] {3}; %% 5 to 6.833 (Last zoom in box)
+          \addplot[very thick,penColor, smooth,domain=(6:6.666)] {x-3}; %% 5 to 6.833  (Last zoom in box)
+          
+          \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(1,1)};  %% point to be zoomed
+          \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(3.5,3)};  %% zoomed pt 1
+          \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(6,3)};  %% zoomed pt 2
+
+          \addplot [->,textColor] plot coordinates {(0,0) (0,6)}; %% axis
+          \addplot [->,textColor] plot coordinates {(0,0) (2,0)}; %% axis
+          
+          \addplot [textColor!50!background] plot coordinates {(.8,.4) (.8,1.6)}; %% box around pt
+          \addplot [textColor!50!background] plot coordinates {(1.2,.4) (1.2,1.6)}; %% box around pt
+          \addplot [textColor!50!background] plot coordinates {(.8,1.6) (1.2,1.6)}; %% box around pt
+          \addplot [textColor!50!background] plot coordinates {(.8,.4) (1.2,.4)}; %% box around pt
+          
+          \addplot [textColor!50!background] plot coordinates {(2.834,1) (2.834,5)}; %% zoomed box 1
+          \addplot [textColor!50!background] plot coordinates {(4.166,1) (4.166,5)}; %% zoomed box 1
+          \addplot [textColor!50!background] plot coordinates {(2.834,1) (4.166,1)}; %% zoomed box 1
+          \addplot [textColor!50!background] plot coordinates {(2.834,5) (4.166,5)}; %% zoomed box 1
+
+          \addplot [textColor] plot coordinates {(3.3,2.4) (3.3,3.6)}; %% box around zoomed pt
+          \addplot [textColor] plot coordinates {(3.7,2.4) (3.7,3.6)}; %% box around zoomed pt
+          \addplot [textColor] plot coordinates {(3.3,3.6) (3.7,3.6)}; %% box around zoomed pt
+          \addplot [textColor] plot coordinates {(3.3,2.4) (3.7,2.4)}; %% box around zoomed pt
+
+          \addplot [textColor] plot coordinates {(5.334,1) (5.334,5)}; %% zoomed box 2
+          \addplot [textColor] plot coordinates {(6.666,1) (6.666,5)}; %% zoomed box 2
+          \addplot [textColor] plot coordinates {(5.334,1) (6.666,1)}; %% zoomed box 2
+          \addplot [textColor] plot coordinates {(5.334,5) (6.666,5)}; %% zoomed box 2
+
+          \node at (axis cs:2.2,0) [anchor=east] {$x$};
+          \node at (axis cs:0,6.6) [anchor=north] {$y$};
+        \end{axis}
+\end{tikzpicture}
+%% \caption{Given a function $f$, if one can ``zoom in'' at $(a, f(a))$
+%% sufficiently so that the graph seems to be a straight line,
+%% then that line is the \textbf{tangent line} to $f$ at the point
+%% determined by $(a, f(a))$.}
+%% \label{figure:informal-tangent}
+\end{image}
+%% \todo{This image should be interactive.}
+
+Notice that however much we 'zoom in' on the function at $x=3$, there is always a kink.
+
+\begin{question}
+Using the 'zoomed in' graph of the piecewise function $f(x)$ above, what is $f'(3)$?
+  \begin{multipleChoice}
+    \choice{$f'(3)=0$ because to the left of the 'kink,' the line is\\
+  horizontal, which has slope $0$.}
+    \choice{$f'(3)=0$ because to the right of the 'kink,' the line has slope $0.5$.}
+    \choice{$f'(3)=0.25$ because $0.25$ is the average of the slopes of the lines to the left and right of the kink.}
+    \choice[correct]{$f'(3)$ does not exist because there is no one \emph{best} approximation of the fucntion at $x=3$.}
+  \end{multipleChoice}
+  \begin{freeResponse}
+  Using that limit vocabulary, explain why the piecewise function $f(x)$
+  is not differentiable at $x=3$. It may be helpful to note that the slope
+  of $f(x)$ when $x<3$ is $0$ and the slope of $f(x)$ when $x>3$ is $0.5$. 
+  \end{freeResponse}
 \end{question}
 
 \begin{example}
@@ -117,6 +223,7 @@ functions on $\RR$ that are not differentiable on $\RR$.
     and differentiable piecewise function.
   \end{explanation}
 \end{example}
+
 
 
 \end{document}
