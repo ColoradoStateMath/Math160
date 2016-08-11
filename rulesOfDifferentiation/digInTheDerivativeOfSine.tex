@@ -6,7 +6,7 @@
 \outcome{Use the definition of the derivative to develop a shortcut
   rule to find the derivative of the sine function.}
 
-\title[Dig-In:]{The derivative of sine}
+\title[Dig-In:]{The derivative of sine and cosine}
 
 \begin{document}
 \begin{abstract}
@@ -190,7 +190,37 @@ accurately describe the slope of the former, and indeed this is true.
  \end{prompt}
 \end{question}
 
+\begin{feedback}
 Pro-tip: When working with trigonometric functions, you should always
 keep their graphical representations in mind.
+\end{feedback}
+
+
+
+
+
+Now that we have derived the derivative of sine, we can mimic that idea to get a little desert: the derivative of cosine!
+
+\begin{theorem}[The derivative of cosine]\index{derivative!of cosine}\label{theorem:deriv cos}
+For any angle $\theta$ measured in radians, the derivative of $\cos(\theta)$ with respect to $\theta$ is $-\sin(\theta)$.  In other words, 
+\[
+\dd{\theta} \cos(\theta) = -\sin(\theta).
+\]
+\begin{explanation}
+Using the definition of the derivative, write with me
+\[
+\dd{\theta} \cos(\theta) = \lim_{h\to0} \frac{\cos(\theta+h)-\cos(\theta)}{h}
+\]
+Now we get sneaky and apply the trigonometric addition formula for sine, that says $\cos(\alpha+\beta) = \cos(\alpha)\cos(\beta)-\sin(\beta)\sin(\alpha)$, to write
+\begin{align*}
+  &= \lim_{h\to0} \frac{\cos(\theta)\cos(h)-\sin(h)\sin(\theta)-\cos(\theta)}{h}  \\
+  &= \lim_{h\to0} \left(\frac{\cos(\theta)\cos(h)-\cos(\theta)}{h} - \frac{\sin(h)\sin{\theta}}{h} \right)\\
+  &=\lim_{h\to0} \left(\cos (\theta)\frac{\cos(h) - 1}{h}-\sin(\theta)\frac{\sin(h)}{h}\right) \\
+  &=\cos(\theta) \cdot \answer[given]{0} - \sin(\theta) \cdot \answer[given]{1}\\
+  &= -\sin(\theta). 
+\end{align*}
+\end{explanation}
+\end{theorem}
+
 
 \end{document}
