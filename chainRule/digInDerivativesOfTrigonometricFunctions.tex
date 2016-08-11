@@ -4,12 +4,11 @@
 
 \title[Dig-In:]{Derivatives of trigonometric functions}
 
-\outcome{Apply chain rule to relate quantities expressed with different units.}
-\outcome{Compute derivatives of trigonometric functions.}
+\outcome{Apply the product and quotient rule compute derivatives of trigonometric functions.}
 
 \begin{document}
 \begin{abstract}
-  We use the chain rule to unleash the derivatives of the
+  We use the product and quotient rule to unleash the derivatives of the
   trigonometric functions.
 \end{abstract}
 \maketitle
@@ -38,37 +37,37 @@ Recall that
 \end{itemize}
 Now
 \begin{align*}
-\ddx \cos(x) &= \ddx \sin\left(\frac{\pi}{2}-x\right)\\
+\ddx \cos(x) &= \ddx \sin\left(\frac{\pi}{2}-x\right)\\ \\
 &=-\cos\left(\frac{\pi}{2}-x\right) \\
 &= -\sin(x).
 \end{align*}
 \end{explanation}
 \end{theorem}
 
-\begin{example}
-Compute:
-\[
-\eval{\ddx \cos \left( \frac{x^3}{2} \right)}_{x=\sqrt[3]{\pi}}
-\]
-\begin{explanation}
-Now that we know the derivative of cosine, we may combine this with the
-chain rule, so we have that
-\[
-\ddx \cos \left( \frac{x^3}{2} \right) = \answer[given]{\frac{3 x^2}{2}} \left(- \sin \left( \frac{x^3}{2} \right) \right)
-\]
-and so
-\[
-\eval{\ddx \cos \left( \frac{x^3}{2} \right)}_{x=\sqrt[3]{\pi}}
-\]
-\begin{align*}
-  &= \eval{\left( \frac{3}{2} x^2 \left(- \sin \left( \frac{x^3}{2}
-    \right) \right) \right)}_{x=\sqrt[3]{\pi}} \\
-  &= - \frac{3}{2}(\sqrt[3]{\pi})^2 \sin \left( \frac{\pi}{2} \right) \\
-  &= -\frac{3}{2} \pi^{\frac{2}{3}} \cdot \answer[given]{1} \\
-  &=\answer[given]{\frac{-3 \pi^{\frac{2}{3}}}{2}}.
-\end{align*}
-\end{explanation}
-\end{example}
+%\begin{example}
+%Compute:
+%\[
+%\eval{\ddx \cos \left( \frac{x^3}{2} \right)}_{x=\sqrt[3]{\pi}}
+%\]
+%\begin{explanation}
+%Now that we know the derivative of cosine, we may combine this with the
+%chain rule, so we have that
+%\[
+%\ddx \cos \left( \frac{x^3}{2} \right) = \answer[given]{\frac{3 x^2}{2}} \left(- \sin \left( \frac{x^3}{2} \right) \right)
+%\]
+%and so
+%\[
+%\eval{\ddx \cos \left( \frac{x^3}{2} \right)}_{x=\sqrt[3]{\pi}}
+%\]
+%\begin{align*}
+%  &= \eval{\left( \frac{3}{2} x^2 \left(- \sin \left( \frac{x^3}{2}
+%    \right) \right) \right)}_{x=\sqrt[3]{\pi}} \\
+%  &= - \frac{3}{2}(\sqrt[3]{\pi})^2 \sin \left( \frac{\pi}{2} %\right) \\
+%  &= -\frac{3}{2} \pi^{\frac{2}{3}} \cdot \answer[given]{1} \\
+%  &=\answer[given]{\frac{-3 \pi^{\frac{2}{3}}}{2}}.
+%\end{align*}
+%\end{explanation}
+%\end{example}
 
 
 Next we have:
