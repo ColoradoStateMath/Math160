@@ -45,6 +45,32 @@ This tells us the instantaneous rate of change at any given point $x$.
   f'(a) = \eval{\ddx f(x)}_{x=a}.
   \]
 \end{warning}
+
+\begin{question}
+Suppose you are given a polynomial $f(x)$ and you are asked to compute $f'(2)$. What is the most efficient way to answer the question?
+  \begin{multipleChoice}
+  \choice[correct]{Compute $\displaystyle \lim_{h\to 0} \frac{f{2+h} - f(2)}{h}$}
+  \choice{Compute the derivative as a function $f'(x) = \lim_{h\to 0} \frac{f{x+h} - f(x)}{h}$, and then evaluate $f'(x)$ at $x=2$}
+  \end{multipleChoice}
+  \begin{question}
+  Suppose you are given a polynomial $f(x)$ and you are asked to compute $f'(-2)$, $f'(0)$, and $f'(2)$. What is the most efficient way to answer the question?
+    \begin{multipleChoice}
+      \choice{Compute $\displaystyle \lim_{h\to 0} \frac{f{-2+h} - f(-2)}{h}$, 
+      $\displaystyle \lim_{h\to 0} \frac{f{0+h} - f(0)}{h}$, and 
+      $\displaystyle \lim_{h\to 0} \frac{f{2+h} - f(2)}{h}$}
+      \choice[correct]{Compute the derivative as a function $f'(x) = \lim_{h\to 0} \frac{f{x+h} - f(x)}{h}$, and then evaluate $f'(x)$ at $x=-2,0$, and $-2$}
+    \end{multipleChoice}
+    \begin{feedback}
+    Typically, a limit computation takes longer than evaluation,
+    so when you need to find that derivative of a function at multiple points,
+    it is often quicker to compute the derivative as a function,
+    and then evaluate at the particular points.
+    \end{feedback}
+  \end{question}
+
+\end{question}
+
+
 Given a function $f$ from the real numbers to the real numbers, the
 derivative $f'$ is also a function from the real numbers to the real
 numbers. Understanding the relationship between the \textit{functions}
@@ -152,13 +178,13 @@ is in fact a function that maps functions to functions,
   \ddx
   \]
   one-to-one? 
+  \begin{hint}
+  Recall that a function is one-to-one if every input has a distinct output, i.e. two inputs have the same output only when they are the same input.
+  \end{hint}
   \begin{multipleChoice}
     \choice{yes}
     \choice[correct]{no}
   \end{multipleChoice}
-  \begin{hint}
-  Recall that a function is one-to-one if every input has a distinct output, i.e. two inputs have the same output only when they are the same input.
-  \end{hint}
   \begin{feedback}
     Many different functions share the same derivative since the
     derivative records only the slope of the tangent line and not
