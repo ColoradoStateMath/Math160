@@ -168,7 +168,26 @@ Since $f'(x) = \answer[given]{\frac{-1}{x^2}}$ and $g'(x) = \answer[given]{2x}$,
 \end{explanation}
 \end{example}
 
+Now that we have the chain rule, we can verify that $\ddx \cos(x) = -\sin(x)$ with the chain rule.
 
+\begin{theorem}[The derivative of cosine]\index{derivative!of cosine}
+\[
+\ddx \cos(x) = -\sin(x).
+\]
+\begin{explanation}
+Recall that
+\begin{itemize}
+\item $\cos(x) = \sin\left(\frac{\pi}{2}-x\right)$, and
+\item $\sin(x) = \cos\left(\frac{\pi}{2}-x\right)$.
+\end{itemize}
+Now
+\begin{align*}
+\ddx \cos(x) &= \ddx \sin\left(\frac{\pi}{2}-x\right)\\ \\
+&=-\cos\left(\frac{\pi}{2}-x\right) \\
+&= -\sin(x).
+\end{align*}
+\end{explanation}
+\end{theorem}
 
 
 
