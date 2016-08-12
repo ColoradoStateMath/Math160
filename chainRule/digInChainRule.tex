@@ -69,6 +69,29 @@ Hence
 \end{explanation}
 \end{example}
 
+Recall that $\ddx \cos(x) = -\sin(x)$. We showed this by using the definition of the derivative and the sum of angles formula. Now that we have the chain rule, we can verify this fact by using the chain rule.
+
+
+
+\begin{theorem}[The derivative of cosine: Take 2]\index{derivative!of cosine Take 2}
+\[
+\ddx \cos(x) = -\sin(x).
+\]
+\begin{explanation}
+Recall that
+\begin{itemize}
+\item $\cos(x) = \sin\left(\frac{\pi}{2}-x\right)$.
+\end{itemize}
+Now
+\begin{align*}
+\ddx \cos(x) &= \ddx \sin\left(\frac{\pi}{2}-x\right)\\ \\
+&=-\cos\left(\frac{\pi}{2}-x\right) \\
+&= -\sin(x).
+\end{align*}
+\end{explanation}
+\end{theorem}
+
+
 \begin{warning}
 When working with derivatives of trigonometric functions, we suggest
 you use \textbf{radians} for angle measure. For example, while
@@ -168,27 +191,43 @@ Since $f'(x) = \answer[given]{\frac{-1}{x^2}}$ and $g'(x) = \answer[given]{2x}$,
 \end{explanation}
 \end{example}
 
-Now that we have the chain rule, we can verify that $\ddx \cos(x) = -\sin(x)$ with the chain rule.
 
-\begin{theorem}[The derivative of cosine]\index{derivative!of cosine}
-\[
-\ddx \cos(x) = -\sin(x). 
-\]
+We can also compute derivatives with a tables of values.
+
+\begin{problem}
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+\textbf{\emph{x}} & \textbf{\emph{f(x)}} & \textbf{\emph{f'(x)}} & \textbf{\emph{g(x)}} & \textbf{\emph{g'(x)}}\\
+\hline \hline
+-2 & 0 & 2 & 3 & 0.75\\
+\hline
+0 & 0.5 & 0.25 & 3 & 1\\
+\hline
+3 & 3 & -4 & -2 & -1\\
+\hline
+\end{tabular}
+\end{center}
+
+
+Using the table of values above, compute $h'(3)$ when $h(x) = f(g(x))$.
+
 \begin{explanation}
-Recall that
-\begin{itemize}
-\item $\cos(x) = \sin\left(\frac{\pi}{2}-x\right)$, and
-\item $\sin(x) = \cos\left(\frac{\pi}{2}-x\right)$.
-\end{itemize}
-Now
-\begin{align*}
-\ddx \cos(x) &= \ddx \sin\left(\frac{\pi}{2}-x\right)\\ \\
-&=-\cos\left(\frac{\pi}{2}-x\right) \\
-&= -\sin(x).
-\end{align*}
-\end{explanation}
-\end{theorem}
+Notice that we need to find the derivative of $h(x)$ at $x=3$, but $h(x)$ is defined terms of $f(x)$ and $g(x)$. Since $h(x)$ is a composition of functions, we need to take the derivative of $h(x)$ using the chain rule.
+\[
+\ddx h(x) = f'(g(x))g'(x)
+\]
+Now that we know what $h'(x)$ looks like, we want to evaluate at $x=3$.
+\[
+\Big[\ddx h(x) \Big]_{x=3} = f'(g(3))g'(3)
+\]
 
+\end{explanation}
+
+
+
+
+\end{problem}
 
 
 \end{document}
