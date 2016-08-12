@@ -122,39 +122,35 @@ Let's see some examples of the fundamental theorem in action.
 \begin{example}
   Compute:
   \[
-  \int_0^5 e^t\d t
+  \int_0^{2\pi} 3\cos(x)\d x
   \]
   \begin{explanation}
-    We start by finding an antiderivative of $e^t$.  A correct choice
-    is $\answer[given]{e^t}$, one could verify this by taking the
+    We start by finding an antiderivative of $3\cos(x)$.  A correct choice
+    is $\answer[given]{-3\sin(x)}$, one could verify this by taking the
     derivative. Hence
     \begin{align*}
-      \int_0^5 e^t \d t &= \eval{e^t}_0^5 \\
-      &= e^5-\answer[given]{e^0}\\
-      &= e^5-\answer[given]{1}.
+      \int_0^{2\pi} 3\cos(x) \d x &= \eval{-3\sin(x)}_0^{2\pi} \\
+      &= -3\sin(2\pi)-\answer[given]{-3\sin(0)}\\
+      &= \answer[given]{0}.
     \end{align*}
   \end{explanation}
 \end{example}
 
-
 \begin{example}
 Compute:
 \[
-\int_1^2\left(x^9 + \frac{1}{x}\right) \d x
+\int_1^2\left(x^9 + \frac{1}{x^2}\right) \d x
 \]
 \begin{explanation}
-We start by finding an antiderivative of $x^9 + \frac{1}{x}$.  A
-correct choice is $\frac{x^{10}}{10} + \ln(x)$, one could verify this
+We start by finding an antiderivative of $x^9 + \frac{1}{x^2}=x^9+x^{-2}$.  A
+correct choice is $\frac{x^{10}}{10} + \frac{x^{-1}}{-1}$, one could verify this
 by taking the derivative. Hence
 \begin{align*}
-\int_1^2\left(x^9 + \frac{1}{x}\right) \d x &= \eval{\frac{x^{10}}{10} + \ln(x)}_1^2 \\
-&= \frac{2^{10}}{10} + \ln(2) - \answer[given]{\frac{1}{10}}.
+\int_1^2\left(x^9 + \frac{1}{x^2}\right) \d x &= \eval{\frac{x^{10}}{10} -\frac{1}{x}}_1^2 \\
+&= \left(\frac{\answer[given]{2}^{10}}{10} -\frac{1}{\answer[given]{2}}\right) - \left(\frac{\answer[given]{1}^{10}}{10} -\frac{1}{\answer[given]{1}}\right).
 \end{align*}
 \end{explanation}
 \end{example}
-
-
-
 
 \section{Understanding motion with the Fundamental Theorem of Calculus}
 
