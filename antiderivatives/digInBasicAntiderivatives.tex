@@ -90,9 +90,9 @@ directly from our knowledge of basic derivatives.
 \begin{itemize}
 \item $\int k \d x= kx+C$
 \item $\int x^n \d x= \frac{x^{n+1}}{n+1}+C\qquad(n\ne-1)$
-\item $\int e^x \d x= e^x + C$
-\item $\int a^x \d x= \frac{a^x}{\ln(a)}+C$
-\item $\int \frac{1}{x} \d x= \ln|x|+C$
+%%\item $\int e^x \d x= e^x + C$
+%%\item $\int a^x \d x= \frac{a^x}{\ln(a)}+C$
+%%\item $\int \frac{1}{x} \d x= \ln|x|+C$
 \item $\int \cos(x) \d x = \sin(x) + C$
 \item $\int \sin(x) \d x = -\cos(x) + C$  
 \item $\int \tan(x) \d x = -\ln|\cos(x)| + C$  
@@ -100,8 +100,8 @@ directly from our knowledge of basic derivatives.
 \item $\int \csc^2(x) \d x = -\cot(x) + C$
 \item $\int \sec(x)\tan(x) \d x = \sec(x) + C$
 \item $\int \csc(x)\cot(x) \d x = -\csc(x) + C$
-\item $\int \frac{1}{x^2+1}\d x = \arctan(x) + C$
-\item $\int \frac{1}{\sqrt{1-x^2}}\d x= \arcsin(x)+C$
+%%\item $\int \frac{1}{x^2+1}\d x = \arctan(x) + C$
+%%\item $\int \frac{1}{\sqrt{1-x^2}}\d x= \arcsin(x)+C$
 \end{itemize}
 %\end{multicols}
 \end{theorem}
@@ -206,7 +206,7 @@ If the indefinite integral looks \emph{something} like
 \]
 guess
 \[
-\mathrm{stuff}^{n+1}
+\mathrm{stuff}^{n+1}+C
 \]
 where $n\ne -1$.
 \end{template}
@@ -234,78 +234,6 @@ where $n\ne -1$.
     \[
     \int \frac{x^3}{\sqrt{x^4 -6}} \d x = \answer[given]{(2/4)(x^4 -6)^{1/2}}+C.
     \]
-\end{explanation}
-\end{example}
-
-
-\begin{template}\label{template:echain}
-If the indefinite integral looks \emph{something} like
-\[
-\int \mathrm{junk}\cdot e^{\mathrm{stuff}} \d x
-\]
-guess
-\[
-e^{\mathrm{stuff}} \text{ or }\mathrm{junk} \cdot e^{\mathrm{stuff}}.
-\]
-\end{template}
-
-
-\begin{example}
-Compute:
-\[
-\int xe^{x} \d x
-\]
-\begin{explanation}
-We try to guess the antiderivative. Start with a guess of
-\[
-\int xe^x \d x \approx xe^x.
-\]
-Take the derivative of your guess to see if it is correct:
-\[
-\ddx xe^x = e^x + xe^x.
-\]
-Ah! So we need only subtract $e^x$ from our original guess.  We now
-find
-\[
-\int xe^x \d x =\answer[given]{xe^x - e^x} + C.
-\]
-\end{explanation}
-\end{example}
-
-
-
-
-
-\begin{template}\label{template:lnchain}
-If the indefinite integral looks \emph{something} like
-\[
-\int \frac{\mathrm{stuff}'}{\mathrm{stuff}}\d x
-\]
-guess
-\[
-\ln(\mathrm{stuff}).
-\]
-\end{template}
-
-\begin{example}
-Compute:
-\[
-\int \frac{2x^2}{7x^3 + 3} \d x
-\]
-\begin{explanation}
-We'll start with a guess of
-\[
-\int \frac{2x^2}{7x^3 + 3} \d x \approx \ln(7x^3+3).
-\]
-Take the derivative of your guess to see if it is correct:
-\[
-\ddx \ln(7x^3+3) = \frac{21x^2}{7x^3 + 3}.
-\]
-We are only off by a factor of $2/21$, so we need to multiply our
-original guess by this constant to get the solution,
-\[
-\int \frac{2x^2}{7x^3 + 3} \d x = \answer[given]{(2/21)\ln(7x^3+3)}+C.
-\]
 \end{explanation}
 \end{example}
 
