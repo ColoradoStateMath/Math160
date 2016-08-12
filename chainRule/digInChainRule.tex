@@ -194,30 +194,20 @@ Since $f'(x) = \answer[given]{\frac{-1}{x^2}}$ and $g'(x) = \answer[given]{2x}$,
 
 We can also compute derivatives with a tables of values.
 
-%\begin{problem}
-
+\begin{problem}
+%%% Table looks bad. Needs to be redone.
 \begin{center}
-
 \begin{tabular}{|c|c|c|c|c|}
 \hline
-\textbf{\emph{x}} & \textbf{\emph{f(x)}} & \textbf{\emph{f'(x)}} & \textbf{\emph{g(x)}} & \textbf{\emph{g'(x)}}\\
-
+\phantom{..}\textbf{\emph{x}}\phantom{..} & \phantom{..}\textbf{\emph{f(x)}}\phantom{..} & \phantom{..}\textbf{\emph{f'(x)}}\phantom{..} & \phantom{..}\textbf{\emph{g(x)}}\phantom{..} & \phantom{..}\textbf{\emph{g'(x)}}\phantom{..}\\
 \hline
-
 $-2$ & $0$ & $2$ & $3$ & $0.75$\\
-
 \hline
-
 $0$ & $0.5$ & $0.25$ & $3$ & $1$\\
-
 \hline
-
 $3$ & $3$ & $-4$ & $-2$ & $-1$\\
-
 \hline
-
 \end{tabular}
-
 \end{center}
 
 
@@ -230,14 +220,26 @@ Notice that we need to find the derivative of $h(x)$ at $x=3$, but $h(x)$ is def
 \]
 Now that we know what $h'(x)$ looks like, we want to evaluate at $x=3$.
 \[
-\Big[\ddx h(x) \Big]_{x=3} = f'(g(3))g'(3)
+\Big[\ddx h(x) \Big]_{x=3} = f'\Big(g(\answer[given]{3})\Big)g'(\answer[given]{3})
 \]
+Using the table of values, we can see that 
+\[
+\begin{aligned}
+f'\Big(g(3)\Big)g'(3) &= f'\Big( \answer[given]{-2}\Big) (\answer[given]{-1}) \\
+ &= \answer[given]{2} (-1)\\
+ &= \answer[given]{-2}.
+\end{aligned}
+\]
+\end{explanation}
 
+\end{problem}
 
-
+\begin{problem}
+%%% Table looks bad. Needs to be redone.
+\begin{center}
 \begin{tabular}{|c|c|c|c|c|}
 \hline
-\textbf{\emph{x}} & \textbf{\emph{f(x)}} & \textbf{\emph{f'(x)}} & \textbf{\emph{g(x)}} & \textbf{\emph{g'(x)}}\\
+\phantom{..}\textbf{\emph{x}}\phantom{..} & \phantom{..}\textbf{\emph{f(x)}}\phantom{..} & \phantom{..}\textbf{\emph{f'(x)}}\phantom{..} & \phantom{..}\textbf{\emph{g(x)}}\phantom{..} & \phantom{..}\textbf{\emph{g'(x)}}\phantom{..}\\
 \hline
 $-2$ & $0$ & $2$ & $3$ & $0.75$\\
 \hline
@@ -246,16 +248,15 @@ $0$ & $0.5$ & $0.25$ & $3$ & $1$\\
 $3$ & $3$ & $-4$ & $-2$ & $-1$\\
 \hline
 \end{tabular}
+\end{center}
 
+Using the table above, what is $p'(x)$ at $x=-2$ when $p(x) = (g \circ f)(x)$?
 
+\begin{prompt}
+   The value of $p'(-2)$ is $\answer[given]{2}$
+\end{prompt}
 
-
-\end{explanation}
-
-
-
-
-%\end{problem}
+\end{problem}
 
 
 \end{document}
