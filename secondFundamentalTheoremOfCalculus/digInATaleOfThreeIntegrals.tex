@@ -42,15 +42,15 @@ Where $F'(x) = f(x)$.
   Two students, say Devyn and Riley, are working with the following
   indefinite integral:
   \[
-  \int \frac{2}{x\ln(x^2)}\d x
+  \int \sin(x)\cos(x)\d x
   \]
   Devyn computes the integral as
   \[
-  \int \frac{2}{x\ln(x^2)}\d x = \ln|\ln|x^2|| + C
+  \int \sin(x)\cos(x)\d x = -\frac{1}{2}\cos^2(x) + C
   \]
   and Riley computes the integral as
   \[
-  \int \frac{2}{x\ln(x^2)}\d x = \ln|\ln|x|| + C.
+  \int \sin(x)\cos(x)\d x = \frac{1}{2}\sin^2(x) + C.
   \]
   Which student is correct?
   \begin{multipleChoice}
@@ -94,7 +94,7 @@ Where $F'(x) = f(x)$.
 \begin{question}
   True or false: There exists a function $f$ such that 
   \[
-  \int_0^x f(t) \d t = e^x
+  \int_0^x f(t) \d t = \cos(x)
   \]
   \begin{multipleChoice}
     \choice{true}
@@ -106,12 +106,12 @@ Where $F'(x) = f(x)$.
     F(x) = \int_0^x f(t) \d t,
     \]
     this is an accumulation function and $F(0) = 0$, since no area is
-    accumulated yet. However, $e^0 =1$. Hence there can be no such
+    accumulated yet. However, $\cos(0) =1$. Hence there can be no such
     function $f$. On the other hand, there is a function $g$ with
      \[
-     \int_0^x g(t) \d t = e^x-1
+     \int_0^x g(t) \d t = \cos(x)-1
      \]
-     namely, $g(x) = e^x$. This subtlety arises from the fact that an
+     namely, $g(x) = \cos(x)$. This subtlety arises from the fact that an
      accumulation function
      \[
      F(x) = \int_a^x f(t) \d t
