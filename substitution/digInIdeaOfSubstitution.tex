@@ -23,7 +23,7 @@ chain rule that
 \[
 \ddx f(g(x)) = f'(g(x))g'(x)
 \]
-so if we conisder
+so if we consider
 \begin{align*}
   \int_a^b f'(g(x))g'(x) \d x &= \eval{f(g(x))}_a^b \\
   &= f(g(b)) - f(g(a)) \\
@@ -31,7 +31,7 @@ so if we conisder
   &= \int_{g(a)}^{g(b)}f'(g) \d g.
 \end{align*}
 
-This ``transformation'' is worth stating explicity:
+This ``transformation'' is worth stating explicitly:
 
 \begin{theorem}[Integral Substitution Formula]\index{integral substitution formula} 
 If $g$ is differentiable on the interval $[a,b]$ and $f$ is
@@ -41,7 +41,7 @@ differentiable on the interval $[g(a),g(b)]$, then
 \]
 \end{theorem}
 
-\section{Three similar techinques}
+\section{Three similar techniques}
 
 There are several different ways to think about substitution. The
 first is directly using the formula
@@ -170,10 +170,10 @@ The next two problems are really good examples of this philosophy.
 \begin{example}
 Compute:
 \[
-\int_{-1}^0 12x^3 e^{x^4} \d x
+\int_{-1}^0 12x^3 \cos(x^4) \d x
 \]
 \begin{explanation}
-The ``ugly'' part of the function being integrated is $e^{x^4}$.  The
+The ``ugly'' part of the function being integrated is $\cos(x^4)$.  The
 ``inside'' of this term is then $x^4$.  So a good possibility is to
 try
 \[
@@ -185,10 +185,10 @@ Then
 \]
 and so
 \begin{align*}
-\int_{-1}^0 12x^3 e^{x^4} \d x &= \int_{g(-1)}^{g(0)} 12 x^3 e^g \answer[given]{\frac{1}{4x^3}} \d g  \\
-&= \int_{\answer[given]{1}}^{\answer[given]{0}} \answer[given]{3 e^g} \d g  \\
-&= \eval{\answer[given]{3e^g}}_{\answer[given]{1}}^{\answer[given]{0}}  \\
-&= \answer[given]{3(1-e)}.
+\int_{-1}^0 12x^3 \cos(x^4) \d x &= \int_{g(-1)}^{g(0)} 12 x^3\cos(g) \answer[given]{\frac{1}{4x^3}} \d g  \\
+&= \int_{\answer[given]{1}}^{\answer[given]{0}} \answer[given]{3 \cos(g)} \d g  \\
+&= \eval{\answer[given]{3\cos(g)}}_{\answer[given]{1}}^{\answer[given]{0}}  \\
+&= \answer[given]{3(1-\cos(1))}.
 \end{align*}
 \end{explanation}
 \end{example}
@@ -199,29 +199,29 @@ and so
 \begin{example}
   Compute:
   \[
-  \int_{1}^{e^{\frac{\pi}{4}}} \frac{\cos(\ln x)}{x} \d x
+  \int_{\frac{1}{\pi}}^{{\frac{6}{\pi}}} \frac{\cos(1/x)}{x^2} \d x
   \]
 \begin{explanation}
-Here the ``ugly'' part here is $\cos(\ln x)$.  So we substitute for
+Here the ``ugly'' part here is $\cos(1/x)$.  So we substitute for
 the inside:
 \[
-g(x)=\answer[given]{\ln x}.
+g(x)=\answer[given]{\frac{1}{x}}.
 \]
 Then
 \[
-\d g =  \answer[given]{\frac{1}{x}} \d x 	\qquad	\Rightarrow	\qquad	\d x = \answer[given]{x} \d g.
+\d g =  \answer[given]{-\frac{1}{x^2}} \d x 	\qquad	\Rightarrow	\qquad	\d x = \answer[given]{-x^2} \d g.
 \]
 Notice that
 \begin{align*}
-g(1) &= \ln (1) = \answer[given]{0} \\
-g \left( e^{\frac{\pi}{4}} \right) &= \ln \left( e^{\frac{\pi}{4}} \right) = \answer[given]{\frac{\pi}{4}}.
+g\left(\frac{1}{\pi}\right) &= \answer[given]{\pi} \\
+g\left(\frac{6}{\pi}\right) &= \answer[given]{\frac{\pi}{6}} \\
 \end{align*}
 Then we substitute back into the original integral and solve:
 \begin{align*}
-\int_{1}^{e^{\frac{\pi}{4}}} \frac{\cos(\ln x)}{x} \d x &= \int_0^{\frac{\pi}{4}} \frac{\cos(g)}{x} x \d g  \\
-&= \int_0^{\frac{\pi}{4}} \cos(g) \d g  \\
-&= \eval{\answer[given]{\sin(g)}}_{0}^{\frac{\pi}{4}}  \\
-&= \answer[given]{\frac{\sqrt{2}}{2}} - \answer[given]{0} = \answer[given]{\frac{\sqrt{2}}{2}}.
+\int_{\frac{1}{\pi}}^{\frac{6}{\pi}} \frac{\cos(1/x)}{x^2} \d x &= \int_{\pi}^{\frac{\pi}{6}} \frac{\cos(g)}{x^2}\cdot -x^2 \d g  \\
+&= -\int_\pi^{\frac{\pi}{6}} \cos(g) \d g  \\
+&= \eval{\answer[given]{-\sin(g)}}_{\pi}^{\frac{\pi}{6}}  \\
+&= \answer[given]{-\frac{1}{2}} - -\answer[given]{0} = \answer[given]{-\frac{1}{2}}.
 \end{align*}
 \end{explanation}
 \end{example}
