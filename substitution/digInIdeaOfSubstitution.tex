@@ -21,23 +21,23 @@ have a general method called ``integration by substitution'' that will
 somewhat help with this difficulty. The idea is this, we know from the
 chain rule that
 \[
-\ddx f(g(x)) = f'(g(x))g'(x)
+\ddx f(u(x)) = f'(u(x))u'(x)
 \]
 so if we consider
 \begin{align*}
-  \int_a^b f'(g(x))g'(x) \d x &= \eval{f(g(x))}_a^b \\
-  &= f(g(b)) - f(g(a)) \\
-  &= \eval{f(g)}_{g(a)}^{g(b)}\\
-  &= \int_{g(a)}^{g(b)}f'(g) \d g.
+  \int_a^b f'(u(x))u'(x) \d x &= \eval{f(u(x))}_a^b \\
+  &= f(u(b)) - f(u(a)) \\
+  &= \eval{f(u)}_{u(a)}^{u(b)}\\
+  &= \int_{u(a)}^{u(b)}f'(u) \d u.
 \end{align*}
 
 This ``transformation'' is worth stating explicitly:
 
 \begin{theorem}[Integral Substitution Formula]\index{integral substitution formula} 
-If $g$ is differentiable on the interval $[a,b]$ and $f$ is
-differentiable on the interval $[g(a),g(b)]$, then
+If $u$ is differentiable on the interval $[a,b]$ and $f$ is
+differentiable on the interval $[u(a),u(b)]$, then
 \[
-\int_a^b f'(g(x)) g'(x) \d x =\int_{g(a)}^{g(b)} f'(g) \d g.
+\int_a^b f'(u(x)) u'(x) \d x =\int_{u(a)}^{u(b)} f'(u) \d u.
 \]
 \end{theorem}
 
@@ -46,7 +46,7 @@ differentiable on the interval $[g(a),g(b)]$, then
 There are several different ways to think about substitution. The
 first is directly using the formula
 \[
-\int_a^b f'(g(x)) g'(x) \d x = \int_{g(a)}^{g(b)} f'(g) \d g.
+\int_a^b f'(u(x)) u'(x) \d x = \int_{u(a)}^{u(b)} f'(u) \d u.
 \]
 \begin{example}
 Compute:
@@ -60,18 +60,18 @@ rule.
 \[
 \int \underbrace{x}_{\text{derivative of inside}}\cos(\underbrace{x^2}_{\text{inside}})\d x.
 \]
-Set $g(x) = x^2$, so $g'(x) = 2x$, and now it must be that $f'(g) =
-\frac{\cos(g)}{2}$. Now we see
+Set $u(x) = x^2$, so $u'(x) = 2x$, and now it must be that $f'(u) =
+\frac{\cos(u)}{2}$. Now we see
 \begin{align*}
-\int_1^3 x\cos(x^2)\d x &= \int_1^9 \frac{\cos(g)}{2}\d g\\
-&= \eval{\frac{\sin(g)}{2}}_1^9 \\
+\int_1^3 x\cos(x^2)\d x &= \int_1^9 \frac{\cos(u)}{2}\d u\\
+&= \eval{\frac{\sin(u)}{2}}_1^9 \\
 &= \frac{\sin(9) -\sin(1)}{2}.
 \end{align*}
 Notice the change of endpoints in the first equality!  
 We obtained the new integrands by the computations
 \begin{align*}
-g(1) &= 1^2 = 1  \\
-g(3) &= 3^2 = 9.
+u(1) &= 1^2 = 1  \\
+u(3) &= 3^2 = 9.
 \end{align*}
 \end{explanation}
 \end{example}
@@ -86,14 +86,20 @@ Compute:
 \int_1^3 x\cos(x^2)\d x
 \]
 \begin{explanation}
-Here we will set $g(x) = x^2$. Then $\d g = \answer[given]{2x} \d x$,
+Here we will look at another way to work with substitution...
+
+Here we will set $u(x) = x^2$. Then $\d u = \answer[given]{2x} \d x$,
 where we are thinking in terms of differentials. So we can solve for
-$\d x$ to get $\d x = \frac{\d g}{\answer[given]{2x}}$.  We then see
+$\d x$ to get $\d x = \frac{\d u}{\answer[given]{2x}}$.  We then see
 that
-\begin{align*}
-  \int_1^3 x \cos(x^2) \d x &= \int_{g(1)}^{g(3)} x \cos(g) \frac{\d g}{2x}\\
-  &= \int_{1}^{9} \frac{\cos(g)}{2}\d g .
-\end{align*}
+\[
+  \int_1^3 x \cos(x^2) \d x = \int_{u(1)}^{u(3)} x \cos(u) \frac{\d u}{2x}
+\]
+
+Make sure to get the integral completely in terms of $u$ before evaluating.
+\[
+  = \int_{1}^{9} \frac{\cos(u)}{2}\d u
+\]
 At this point, we can continue as we did before and write
 \[
 \int_1^3 x\cos(x^2)\d x= \frac{\sin(9) -\sin(1)}{2}.
@@ -110,27 +116,37 @@ Compute:
 \int_1^3 x\cos(x^2)\d x
 \]
 \begin{explanation}
-Here we start as we did before, setting $g(x)=x^2$. Now $\d g =  2x \d x$,
-again thinking in terms of differentials. Now we see that
+And yet a 3rd way to think about this integral...
+
+Here we start as we did before, setting $u(x)=x^2$. Now $\d u =  2x \d x$.
 \[
-\int x \cos(x^2) \d x = \int x \cos(g) \frac{\d g}{2x} = \int \frac{\cos(g)}{2}\d g .
+\int x \cos(x^2) \d x = \frac{1}{2}\int 2x\cos(x^2) \d x = \int \frac{1}{2} \cos(u)\d u .
 \]
 Hence 
 \[
-\int x\cos(x^2)\d x = \frac{\sin(g)}{2} = \frac{\sin(x^2)}{2}.
+\int x\cos(x^2)\d x = \frac{\sin(u)}{2} = \frac{\sin(x^2)}{2}.
 \]
 So
 \begin{align*}
 \int_1^3 x\cos(x^2)\d x &=\eval{\frac{\sin(x^2)}{2}}_1^3\\
 &= \frac{\sin(9) -\sin(1)}{2}.
 \end{align*}
+
+What you should never do is write something like:
+\[
+\int_1^3 \frac{1}{2}\cos(u) \d u
+\]
+What is the problem with writing this? 
+
+The methods presented in the first example are preferred for this course.
+
 \end{explanation}
 \end{example}
 
 \section{More examples}
 
 With some experience, it is (usually) not too hard to see what to
-substitute as $g$.  We will work through the following examples in the
+substitute as $u$.  We will work through the following examples in the
 same way that we did for Example \ref{main example}. Let's see another
 example.
 
@@ -140,17 +156,17 @@ Compute:
 \int x^4(x^5+1)^{9} \d x
 \]
 \begin{explanation}
-Here we set $g(x) =  \answer[given]{x^5+1}$, so $\d g =  \answer[given]{5x^4} \d x$.  Then
+Here we set $u(x) =  \answer[given]{x^5+1}$, so $\d u =  \answer[given]{5x^4} \d x$.  Then
 \begin{align*}
   \int x^4(x^5+1)^{9} \d x &= \frac{1}{5} \int 5x^4 (x^5+1)^{9} \d x \\
-  &= \frac{1}{5} \int g^{9} \d g\\
-&= \answer[given]{\frac{g^{10}}{50}}.
+  &= \frac{1}{5} \int u^{9} \d u\\
+&= \answer[given]{\frac{u^{10}}{50}}.
 \end{align*}
 Notice that this example is an indefinite integral and not a definite
 integral, meaning that there are no limits of integration.  So we do
 not need to worry about changing the endpoints of the integral.  However,
 we do need to back-substitute into our answer, so that our final
-answer is a function of $x$.  Recalling that $g(x) = x^5+1$, we have
+answer is a function of $x$.  Recalling that $u(x) = x^5+1$, we have
 our final answer
 \[
 \int x^4(x^5+1)^{9} \d x= \answer[given]{\frac{(x^5+1)^{10}}{50}}+C.
@@ -177,18 +193,19 @@ The ``ugly'' part of the function being integrated is $\cos(x^4)$.  The
 ``inside'' of this term is then $x^4$.  So a good possibility is to
 try
 \[
-g(x) =  \answer[given]{x^4}.
+u(x) =  \answer[given]{x^4}.
 \]
 Then
 \[
-\d g =  \answer[given]{4x^3} \d x 	\qquad	\Rightarrow	\qquad	\d x = \answer[given]{\frac{1}{4x^3}} \d g
+\d u =  \answer[given]{4x^3} \d x 	\qquad	\Rightarrow	\qquad	\answer[given]{\frac{1}{4}} \d u = \answer[given]{x^3}\d x
 \]
 and so
 \begin{align*}
-\int_{-1}^0 12x^3 \cos(x^4) \d x &= \int_{g(-1)}^{g(0)} 12 x^3\cos(g) \answer[given]{\frac{1}{4x^3}} \d g  \\
-&= \int_{\answer[given]{1}}^{\answer[given]{0}} \answer[given]{3 \cos(g)} \d g  \\
-&= \eval{\answer[given]{3\cos(g)}}_{\answer[given]{1}}^{\answer[given]{0}}  \\
-&= \answer[given]{3(1-\cos(1))}.
+\int_{-1}^0 12x^3 \cos(x^4) \d x &= \int_{u(-1)}^{u(0)} 12 \cdot\answer[given]{\frac{1}{4}\cos(u)} \d u  \\
+&= \int_{\answer[given]{1}}^{\answer[given]{0}} \answer[given]{3 \cos(u)} \d u  \\
+&= \eval{\answer[given]{3\sin(u)}}_{\answer[given]{1}}^{\answer[given]{0}}  \\
+&= \answer[given]{3(0-\sin(1))}\\
+&= \answer[given]{-3\sin(1)}
 \end{align*}
 \end{explanation}
 \end{example}
@@ -205,33 +222,33 @@ and so
 Here the ``ugly'' part here is $\cos(1/x)$.  So we substitute for
 the inside:
 \[
-g(x)=\answer[given]{\frac{1}{x}}.
+u(x)=\answer[given]{\frac{1}{x}}.
 \]
 Then
 \[
-\d g =  \answer[given]{-\frac{1}{x^2}} \d x 	\qquad	\Rightarrow	\qquad	\d x = \answer[given]{-x^2} \d g.
+\d u =  \answer[given]{-\frac{1}{x^2}} \d x 	\qquad	\Rightarrow	\qquad	\answer[given]{-1} \d u = \frac{1}{x^2}\d x.
 \]
 Notice that
 \begin{align*}
-g\left(\frac{1}{\pi}\right) &= \answer[given]{\pi} \\
-g\left(\frac{6}{\pi}\right) &= \answer[given]{\frac{\pi}{6}} \\
+u\left(\frac{1}{\pi}\right) &= \answer[given]{\pi} \\
+u\left(\frac{6}{\pi}\right) &= \answer[given]{\frac{\pi}{6}} \\
 \end{align*}
 Then we substitute back into the original integral and solve:
 \begin{align*}
-\int_{\frac{1}{\pi}}^{\frac{6}{\pi}} \frac{\cos(1/x)}{x^2} \d x &= \int_{\pi}^{\frac{\pi}{6}} \frac{\cos(g)}{x^2}\cdot -x^2 \d g  \\
-&= -\int_\pi^{\frac{\pi}{6}} \cos(g) \d g  \\
-&= \eval{\answer[given]{-\sin(g)}}_{\pi}^{\frac{\pi}{6}}  \\
+\int_{\frac{1}{\pi}}^{\frac{6}{\pi}} \frac{\cos(1/x)}{x^2} \d x &= \int_{\pi}^{\frac{\pi}{6}} -\cos(u) \d u  \\
+&= -\int_\pi^{\frac{\pi}{6}} \cos(u) \d u  \\
+&= \eval{\answer[given]{-\sin(u)}}_{\pi}^{\frac{\pi}{6}}  \\
 &= \answer[given]{-\frac{1}{2}} - -\answer[given]{0} = \answer[given]{-\frac{1}{2}}.
 \end{align*}
 \end{explanation}
 \end{example}
 
 To summarize, if we suspect that a given function is the derivative of
-another via the chain rule, we let $g$ denote a likely candidate for
+another via the chain rule, we let $u$ denote a likely candidate for
 the inner function, then translate the given function so that it is
-written entirely in terms of $g$, with no $x$ remaining in the
-expression. If we can integrate this new function of $g$, then the
-antiderivative of the original function is obtained by replacing $g$
+written entirely in terms of $u$, with no $x$ remaining in the
+expression. If we can integrate this new function of $u$, then the
+antiderivative of the original function is obtained by replacing $u$
 by the equivalent expression in $x$.
 
 
