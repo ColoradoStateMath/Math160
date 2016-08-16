@@ -250,23 +250,22 @@ happens when we compose them with other functions.
 \begin{example}
   Find the derivative of
   \[
-  F(x) = \int_2^{x^2} \ln t \d t.
+  F(x) = \int_2^{x^2} \cos t \d t.
   \]
   \begin{explanation}
     Consider 
     \[
-    G(x) = \int_2^x \ln t \d t
+    G(x) = \int_2^x \cos t \d t
     \]
     and set $h(x) = \answer[given]{x^2}$. Now
     \[
     F(x) = G(h(x)).
     \]
-    The First Fundamental Theorem of Calculus states that $G'(x) = \ln
-    x$. The chain rule gives us
+    The First Fundamental Theorem of Calculus states that $G'(x) = \cos x$. The chain rule gives us
     \begin{align*}
       F'(x) &= G'(h(x)) h'(x) \\
-      &= \ln (h(x)) h'(x) \\
-      &= \answer[given]{\ln (x^2) 2x}.
+      &= \cos (h(x)) h'(x) \\
+      &= \answer[given]{\cos (x^2) 2x}.
     \end{align*}
   \end{explanation}
 \end{example}
