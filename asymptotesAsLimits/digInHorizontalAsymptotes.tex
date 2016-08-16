@@ -47,6 +47,8 @@ f(x) = \frac{6x-9}{x-1}
 As $x$ approaches infinity, it seems like $f(x)$ approaches a specific
 value. Such a limit is called a \textit{limit at infinity}.
 
+
+%%DEFINITIONS
 \begin{definition}\label{def:limitAtInfty}\index{limit!at infinity}
 If $f(x)$ becomes arbitrarily close to a specific value $L$ by making
 $x$ sufficiently large, we write
@@ -63,6 +65,7 @@ $x$ sufficiently large and negative, we write
 and we say, the \dfn{limit at negative infinity} of $f(x)$ is $L$.  
 \end{definition}
 
+%%Example 1
 \begin{example} Compute
 \[
 \lim_{x\to\infty} \frac{6x-9}{x-1}.
@@ -78,9 +81,67 @@ Write
 \end{explanation}
 \end{example}
 
+%%Example 2
+\begin{example} Compute
+\[
+\lim_{x\to\infty} \frac{6x-9}{x^2-1}.
+\]
+\begin{explanation}
+Write
+\begin{align*}
+\lim_{x\to\infty}\frac{6x-9}{x^2-1} &= \lim_{x\to\infty}\frac{6x-9}{x^2-1}\cdot \frac{1/x^2}{1/x^2}\\
+&=\lim_{x\to\infty}\frac{\frac{6x}{x^2} - \frac{9}{x^2}}{\frac{x}{x^2} - \frac{1}{x^2}}\\
+&= \lim_{x\to\infty} \frac{\frac{6}{x}-\frac{9}{x^2}}{1-\frac{1}{x^2}}\\
+&= \frac{0}{1}=0.
+\end{align*}
+\end{explanation}
+\end{example}
+
+%%CONSIDER 1/X
+Notice that in both examples, the numerator and denominator are multiplied by $\displaystyle\frac{1}{\phantom{xx}x^{\text{highest power in denominator}}\phantom{xx}}$.
+
+Why is this the case? Let's consider the basic rational function
+
+\[
+f(x) = \frac{1}{x}
+\]
+\begin{image}
+\begin{tikzpicture}
+	\begin{axis}[
+            domain=-4:4,
+            ymax=20,
+            ymin=-10,
+            samples=100,
+            axis lines =middle, xlabel=$x$, ylabel=$y$,
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west}
+          ]
+	  \addplot [very thick, penColor, smooth, domain=(-3:-0.01)] {(1)/(x)};
+      \addplot [very thick, penColor, smooth, domain=(0.01:3)] {(1)/(x)};
+      \addplot [textColor, dashed] plot coordinates {(0,-20) (0,20)};
+ 
+          
+        \end{axis}
+\end{tikzpicture}
+\end{image}
+As $x$ approaches infinity, $f(x)$ approaches $0$. If we can get individual terms in our rational function to ``look like'' the known basic rational function $f(x)=\frac{1}{x}$, then we can more easily evaluate the limit as $x$ approaches infinity. Therefore, the technique applied to $\displaystyle\lim_{x\to \infty}\frac{numerator}{denominator}$ is to multiply the numerator and denominator by $\displaystyle\frac{1}{\phantom{xx}x^{\text{highest power in denominator}}\phantom{xx}}$.
 
 
-
+%%Example 3
+\begin{example} Compute
+\[
+\lim_{x\to\infty} \frac{3x^4-5x^2+1}{x^2-x+2x^4}.
+\]
+\begin{explanation}
+Write
+\begin{align*}
+\lim_{x\to\infty}\frac{3x^4-5x^2+1}{x^2-x+2x^4} &= \lim_{x\to\infty}\frac{3x^4-5x^2+1}{x^2-x+2x^4}\cdot \frac{1/x^4}{1/x^4}\\
+&=\lim_{x\to\infty}\frac{\frac{3x^4}{x^4} - \frac{5x^2}{x^4}+\frac{1}{x^4}}{\frac{x^2}{x^4}-\frac{x}{x^4} + \frac{2x^4}{x^4}}\\
+&= \lim_{x\to\infty} \frac{3-\frac{5}{x^2}+\frac{1}{x^4}}{\frac{1}{x^2}-\frac{1}{x^3}+2}\\
+&= \frac{3}{2}.
+\end{align*}
+\end{explanation}
+\end{example}
 
 Sometimes one must be careful, consider this example.
 
