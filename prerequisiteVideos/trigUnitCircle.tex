@@ -1,17 +1,18 @@
 \documentclass{ximera}
 
 \input{../preamble.tex}
-
 \title[Prerequisite Videos: ]{Trigonometry: The Unit Circle}
+\author{Ben Sencindiver}
 
 \outcome{Understand how the unit circle is build and its meaning.}
 
 \begin{document}
 \begin{abstract}
-  In this series of videos, we will be aimed at using basic right angle
-  trigonometry and the Pythagorean Theorem to develop the unit circle 
-  and understand how it can be used and how what it means, 
-  as well some typical values of the unit circle.
+  This series of videos will be aimed at using basic right angle trigonometry
+  and the Pythagorean Theorem to develop an understanding of trigonometric
+  functions and the unit circle and understand how it can be used and
+  how what it means, as well some typical values on the unit circle
+  and of trigonometric functions.
 \end{abstract}
 \maketitle
 
@@ -28,8 +29,8 @@ The following videos will cover the unit circle:
 \begin{expandable}
 \youtube{df_2HysgT3k}
 %% Multiple Choice Question 1
-{\color{blue}(\emph{Click the arrow to the right to see the answers 
-to the question posed at the end of the video.})}
+{\color{blue}(\emph{Click the arrow to the right to see the question
+posed at the end of the video.})}
 \begin{expandable}
 If the hypotenuse of a right triangle is $8$cm long and one side is
 $6$cm long, what is the length of the remaining side?
@@ -70,12 +71,32 @@ of trigonometric functions and second question.})}
 \begin{expandable}
 \youtube{VCKoWgqH6qI}
 %% Multiple Choice Question 2
-{\color{blue}(\emph{Click the arrow to the right to see the answers 
-to the question posed at the end of the video.})}
+{\color{blue}(\emph{Click the arrow to the right to see the question
+posed at the end of the video.})}
 \begin{expandable}
-%%%
-%%% Need Triangle picture %%%%%%%
-%%%
+\begin{center}
+\begin{tikzpicture}[thick]
+\coordinate (O) at (0,0);
+\coordinate (A) at (4,0);
+\coordinate (B) at (4,2);
+\draw (O)--(A)--(B)--cycle;
+%% The Right Angle
+\coordinate (C) at (3.7,0);
+\coordinate (D) at (3.7,0.3);
+\coordinate (E) at (4,0.3);
+\draw (C)--(D)--(E);
+%% Line segment labeling
+\tkzLabelSegment[below=2pt](O,A){b}
+\tkzLabelSegment[above left=2pt](O,B){c}
+\tkzLabelSegment[right=2pt](A,B){a}
+%% Angle Labeling
+\tkzMarkAngle[size=0.9cm,opacity=.4](A,O,B)
+\tkzLabelAngle[pos = 0.7](A,O,B){$\theta$}
+%% Angle Labeling
+\tkzMarkAngle[size=0.65cm, opacity=.4](O,B,A)
+\tkzLabelAngle[pos = 0.45](O,B,A){$\varphi$}
+\end{tikzpicture}
+\end{center}
 Consider the triangle below where $a = 6$, $b=2\sqrt{7}$,
 and $c=8$. What is $\sin( \theta)$?\\
 \begin{prompt}
@@ -153,19 +174,20 @@ without a triangle}
 \begin{question}
 %% Labeling this expandable option
 \begin{flushright}
-{\color{blue}(\emph{Click the arrow to the right to see the video about radians, converting between radians and degrees, and the fourth question.})}
+{\color{blue}(\emph{Click the arrow to the right to see the video about
+radians, converting between radians and degrees, and the fourth question.})}
 \end{flushright}
 \begin{center}
 \begin{expandable}
 \youtube{JTqB-ixAf3o}
 %% Multiple Choice Question 4
-{\color{blue}(\emph{Click the arrow to the right to see the answers 
-to the question posed at the end of the video.})}
+{\color{blue}(\emph{Click the arrow to the right to see the  question
+posed at the end of the video.})}
 \begin{expandable}
-What is $\tan(\frac{\pi}{4})$?
+What is $\tan\Big(\frac{\pi}{4}\Big)$?
 \begin{prompt}
 \[
-\tan(\frac{\pi}{4})\text{ is }\answer[given]{1}
+\tan\Big(\frac{\pi}{4}\Big)\text{ is }\answer[given]{1}
 \]
 \end{prompt}
 %% Example 4
@@ -188,15 +210,17 @@ Example 4
 %% Labeling this expandable option
 \begin{flushright}
 {\color{blue}(\emph{Click the arrow to the right to see
-the video about how to build the unit circle, what points
-on the unit circle mean, and the fifth question.})}
+the
+video about how to build the unit circle, what points
+on the
+unit circle mean, and the fifth question.})}
 \end{flushright}
 \begin{center}
 \begin{expandable}
 \youtube{ZxKCQczwzbg}
 %% Multiple Choice Question 5
-{\color{blue}(\emph{Click the arrow to the right to see the answers 
-to the question posed at the end of the video.})}
+{\color{blue}(\emph{Click the arrow to the right to see the question
+posed at the end of the video.})}
 \begin{expandable}
 In the first quadrant, how many solutions are there to $\cos(\theta) = \frac{\pi}{2}$
 \begin{prompt}
@@ -233,16 +257,16 @@ functions to all angles}
 \begin{question}
 %% Labeling this expandable option
 \begin{flushright}
-{\color{blue}(\emph{Click the arrow to the right to see
-the video about extending the unit circle trigonometric
-functions to all angles, and the sixth question.})}
+{\color{blue}(\emph{Click the arrow to the right to see the
+video about extending the unit circle trigonometric functions to all
+angles, and the sixth question.})}
 \end{flushright}
 \begin{center}
 \begin{expandable}
 \youtube{uF7wSNToPwU}
 %% Multiple Choice Question 6
-{\color{blue}(\emph{Click the arrow to the right to see the answers 
-to the question posed at the end of the video.})}
+{\color{blue}(\emph{Click the arrow to the right to see the question
+posed at the end of the video.})}
 \begin{expandable}
 What is $\csc\Big(\dfrac{4\pi}{3}\Big)$?
 \begin{prompt}
