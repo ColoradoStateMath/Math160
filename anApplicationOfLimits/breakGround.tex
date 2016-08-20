@@ -43,7 +43,7 @@ s(t) = 36t^2 -4.8t^3 \qquad\text{(miles West of Columbus)} %% note the model is 
 \]
 where $t$ is measured in hours and runs from $0$ to $5$ hours. 
 
-
+%%AVERAGE VELOCITY%%
 \begin{problem}
   What is the average velocity for the entire trip?
   \begin{hint}
@@ -69,9 +69,27 @@ where $t$ is measured in hours and runs from $0$ to $5$ hours.
   \end{prompt}
 \end{problem}
 
-
+%%USING TABLE TO ESTIMATE INST VELOCITY%%
 \begin{problem}
-  Use a calculator to estimate the instantaneous velocity at $t=2$.
+  Use a calculator to estimate the instantaneous velocity at $t=2$ by filling in the table below. Remember to keep using $s(t)=36t^2-4.8t^3$.
+  
+  \[
+\begin{array}{c|c|c|c|c}
+ t & s(2) & \Delta t & s(2+\Delta t) & \frac{s(2+\Delta t)-s(2)}{\Delta t}\\ \hline
+2 & 105.6 & 1 & \answer[given]{194.4} & \answer[given]{88.8}\\
+2 & 105.6 & 0.5 & \answer[given]{150} & \answer[given]{88.8}\\
+2 & 105.6 & 0.25 & \answer[given]{127.575} & \answer[given]{87.9}\\
+2 & 105.6 & 0.1 & \answer[given]{114.3072} & \answer[given]{87.072}\\
+2 & 105.6 & 0.01 & \answer[given, tolerance=0.001]{106.4647152} & \answer[given, tolerance=0.001]{86.47152}\\
+2 & 105.6 & 0.001 & \answer[given, tolerance=0.001]{105.6864071952} & \answer[given, tolerance=0.001]{86.4071952}\\
+\end{array}
+\]
+
+\end{problem}
+
+%%LIMIT COMPUTING INST VELOCITY%%
+\begin{problem}
+  Calculate the instantaneous velocity at $t=2$. Keep using $s(t)=36t^2-4.8t^3$.
   \begin{hint}
     Remember, 
     \[
@@ -87,8 +105,18 @@ where $t$ is measured in hours and runs from $0$ to $5$ hours.
   \begin{hint}
     Simplify
     \[
-    \frac{36(2+\Delta t)^2 -4.8(2+\Delta t)^3 -\left(36\cdot 2^2 -4.8\cdot 2^3\right) }{\Delta t}
+    \frac{36(2+\Delta t)^2 -4.8(2+\Delta t)^3 -\left(36\cdot 2^2 -4.8\cdot 2^3\right) }{\Delta t}:
     \]
+    
+    \[
+    =\frac{\answer[given]{-4.8}\Delta t^3+\answer[given]{7.2}\Delta t^2+\answer[given]{86.4}\Delta t}{\Delta t}
+    \]
+    
+    \[
+    =\answer[given]{-4.8}\Delta t^2+\answer[given]{7.2}\Delta t+\answer[given]{86.4}
+    \]
+    
+    What is the instantaneous velocity at $t=2$? i.e. What happens as $\Delta t\rightarrow 0$?
     
   \end{hint}
   \begin{prompt}
@@ -106,15 +134,15 @@ where $t$ is measured in hours and runs from $0$ to $5$ hours.
   when (choose all that apply):
  \begin{selectAll}
     \choice{The ``change in time'' is zero.}
-    \choice[correct]{The ``change in time'' gets closer and closer to zero.}
-    \choice[correct]{The ``change in time'' approaches zero.}
-    \choice{The ``change in time'' is near zero.}
+    \choice[correct]{The ``change in time'' is arbitrarily close zero.}
+    %%\choice[correct]{The ``change in time'' approaches zero.}
+    \choice{The ``change in time'' is nearby zero.}
     \choice[correct]{The ``change in time'' goes to zero.}
  \end{selectAll}
 \end{problem}
 
 
-Computing average velocities for smaller, and smaller, values of
+Computing average velocities for arbitrarily small values of
 $\Delta t$ as we did above is tedious. Nevertheless, this is exactly
 how a GPS determines velocity from position! To avoid these tedious
 calculations, we would really like to have a formula.
