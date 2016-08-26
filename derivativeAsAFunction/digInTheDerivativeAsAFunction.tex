@@ -46,14 +46,16 @@ This tells us the instantaneous rate of change at any given point $x$.
   \]
 \end{warning}
 
-\begin{question}
+\begin{problem}
 Suppose you are given a polynomial $f(x)$ and you are asked to compute $f'(2)$. What is the most efficient way to answer the question?
   \begin{multipleChoice}
   \choice[correct]{Compute $f'(2)$ directly from the definition of \\
   derivative of a function at a point}
   \choice{Compute the derivative as a function $f'(x)$, and then evaluate $f'(x)$ at $x=2$}
   \end{multipleChoice}
-  \begin{question}
+ \end{problem}
+ 
+  \begin{problem}
   Suppose you are given a polynomial $f(x)$ and you are asked to compute $f'(-2)$, $f'(0)$, and $f'(2)$. What is the most efficient way to answer the question?
     \begin{multipleChoice}
       \choice{Compute $f'(-2)$, $f'(0)$, and $f'(2)$ directly from the\\
@@ -67,9 +69,7 @@ Suppose you are given a polynomial $f(x)$ and you are asked to compute $f'(2)$. 
     it is often quicker to compute the derivative as a function,
     and then evaluate at the particular points.
     \end{feedback}
-  \end{question}
-
-\end{question}
+  \end{problem}
 
 
 Given a function $f$ from the real numbers to the real numbers, the
@@ -78,17 +78,17 @@ numbers. Understanding the relationship between the \textit{functions}
 $f$ and $f'$ helps us understand any situation (real or imagined)
 involving changing values. 
 
-\begin{question}
+\begin{problem}
   Let $f(x) = 3x+2$. What is $f'(-1)$?
   \begin{multipleChoice}
     \choice{$f'(-1) = 0$ because $f'(3)$ is a number, and a number corresponds to a horizontal line,\\ which has a slope of zero.}
     \choice[correct]{$f'(-1) = 3$ because $y=f(x)$ is a straight line with slope $3$.}
     \choice{We cannot solve this problem yet.}
   \end{multipleChoice}
-\end{question}
+\end{problem}
 
 
-\begin{question}
+\begin{problem}
   Here we see the graph of $f'$. 
   \begin{image}
     \begin{tikzpicture}
@@ -112,7 +112,9 @@ involving changing values.
     When $f'$ is positive, $y=f(x)$ is \wordChoice{\choice{positive}\choice[correct]{increasing}\choice{negative}\choice{decreasing}}.
     When $f'$ is negative, $y=f(x)$ is \wordChoice{\choice{positive}\choice{increasing}\choice{negative}\choice[correct]{decreasing}}
   \end{prompt}
-  \begin{question}
+\end{problem}
+
+\begin{problem}
     Which of the following graphs could be $y = f(x)$?
      \begin{multipleChoice}
        \choice{\begin{tikzpicture}[framed,scale=1,baseline=3ex]
@@ -155,8 +157,8 @@ involving changing values.
            \end{axis}
        \end{tikzpicture}}
      \end{multipleChoice}
-  \end{question}
-\end{question}
+  \end{problem}
+
 
 
 
@@ -173,7 +175,7 @@ is in fact a function that maps functions to functions,
   \ddx f(x) &= f'(x).
 \end{align*}
 
-\begin{question}
+\begin{problem}
   As a function, is
   \[
   \ddx
@@ -191,7 +193,7 @@ is in fact a function that maps functions to functions,
     derivative records only the slope of the tangent line and not
     the value, or height.
   \end{feedback}
-\end{question}
+\end{problem}
 
 \end{document}
 
