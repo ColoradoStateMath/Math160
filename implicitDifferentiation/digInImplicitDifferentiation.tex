@@ -174,14 +174,14 @@ Let's examine each of these terms in turn. To start
 \]
 On the other hand $\ddx y^3$ is somewhat different. Here you imagine that $y = f(x)$, and hence by the chain rule
 \begin{align*}
-\ddx y^3 &= \ddx (y(x))^3 \\ 
+\ddx y^3 &= \ddx (f(x))^3 \\ 
 &= 3(f(x))^2 \cdot f'(x) \\
 &= 3y^2\dd[y]{x}.\\
 \end{align*}
 Considering the final term $\ddx 9xy$, we again imagine that $y=f(x)$. Hence 
 \begin{align*}
 \ddx 9xy &= 9\ddx x\cdot f(x) \\
-&= 9 \left(x\cdot y'(x) + f(x)\right)\\
+&= 9 \left(x\cdot f'(x) + f(x)\right)\\
 &= 9x \dd[y]{x} + 9y.
 \end{align*}
 Putting this all together we are left with the equation
@@ -229,7 +229,7 @@ is $\frac{5}{4}$. We've included a plot for your viewing pleasure:
 
 You might think that the step in which we solve for $\dd[y]{x}$ could
 sometimes be difficult. In fact, \textit{this never happens}. All
-occurrences $\dd[y]{x}$ arise from applying the chain rule, and
+occurrences of $\dd[y]{x}$ arise from applying the chain rule, and
 whenever the chain rule is used it deposits a single $\dd[y]{x}$
 multiplied by some other expression. Hence our expression is linear in
 $\dd[y]{x}$, it will always be possible to group the terms containing
